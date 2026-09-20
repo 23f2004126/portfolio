@@ -156,7 +156,7 @@
             </div>
         </section>
 
-        <!-- About Section (Buttons Removed) -->
+        <!-- About Section -->
         <section id="about" class="py-24 px-6 border-t border-theme-border bg-theme-surface/30">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-6 flex items-center gap-3">
@@ -170,7 +170,7 @@
             </div>
         </section>
 
-        <!-- Experience Section (Wide, Auto Flexible with Company Logo Image Support) -->
+        <!-- Experience Section -->
         <section id="experience" class="py-24 px-6 border-t border-theme-border">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-8 flex items-center gap-3">
@@ -184,7 +184,6 @@
                             <!-- Front -->
                             <div class="bg-theme-surface border border-theme-border p-6 sm:p-7 rounded-xl flex flex-col sm:flex-row items-start justify-between gap-6 shadow-sm backface-hidden">
                                 <div class="flex items-start gap-5 w-full">
-                                    <!-- Company Logo Container (Replace explified_logo.jpg with your exact image path) -->
                                     <div class="w-14 h-14 rounded-xl bg-theme-bg border border-theme-primary/30 overflow-hidden shrink-0 shadow-inner flex items-center justify-center p-1">
                                         <img src="experience/1.png" alt="Explified Logo" class="w-full h-full object-contain rounded-lg" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fa-solid fa-building-user text-theme-primary text-xl\'></i>';">
                                     </div>
@@ -590,7 +589,7 @@
             </div>
         </section>
 
-        <!-- Certifications Section (With Explicit SQL and PM Skills Added) -->
+        <!-- Certifications Section -->
         <section id="certificates" class="py-24 px-6 border-t border-theme-border">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-2xl font-bold text-theme-textMain mb-8 flex items-center gap-3">
@@ -686,12 +685,107 @@
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-4 flex items-center gap-3">
                     <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Case Studies
                 </h2>
-                <p class="text-theme-textSec mb-8">Detailed deep-dives into product strategy, analytics, and execution are under preparation.</p>
+                <p class="text-theme-textSec mb-8">Detailed deep-dives into product strategy, analytics, and execution.</p>
                 
-                <div class="bg-theme-surface border border-theme-border border-dashed p-12 rounded-2xl flex flex-col items-center justify-center text-center opacity-70">
-                    <i class="fa-solid fa-person-digging text-3xl text-theme-primary mb-4"></i>
-                    <h3 class="text-lg font-bold text-theme-textMain">Case Studies Coming Soon</h3>
-                    <p class="text-sm text-theme-textSec mt-1">Detailed case studies are currently under construction.</p>
+                <div class="space-y-6">
+                    <!-- Case Study Card: CTRL + THINK -->
+                    <div class="perspective-1000 w-full">
+                        <div id="card-case-1" class="relative w-full duration-700 transform-style-3d shadow-md rounded-2xl">
+                            <!-- Front -->
+                            <div class="bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col md:flex-row items-center gap-6 shadow-sm backface-hidden">
+                                <!-- Logo / Cover Image (Sized bigger, just a bit less than the length of the tile) -->
+                                <div class="w-full md:w-5/12 aspect-[4/3] bg-theme-bg border border-theme-border/70 rounded-xl relative flex items-center justify-center overflow-hidden shadow-inner shrink-0">
+                                    <img src="case study/1.jpg" alt="CTRL + THINK Cover" class="w-full h-full object-cover" />
+                                </div>
+                                
+                                <div class="flex-grow space-y-4 w-full">
+                                    <div class="flex items-center justify-between">
+                                        <span class="px-3 py-1 bg-theme-accentBg text-theme-primary text-xs font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> AI Product Teardown</span>
+                                        <button onclick="flipCard('case-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3.5 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
+                                            <i class="fa-solid fa-rotate"></i> Flip Card
+                                        </button>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <span class="text-xs font-bold text-theme-primary uppercase tracking-wider">September 2026 · v1.0</span>
+                                        <h3 class="text-xl font-bold text-theme-textMain">CTRL + THINK : The Art of Artificial Thinking</h3>
+                                        <p class="text-sm font-medium text-theme-textSec">Comparative Product Teardown: ChatGPT vs Claude vs Gemini</p>
+                                        <p class="text-theme-textSec text-xs leading-relaxed">
+                                            A comparative product teardown across monetization, feature prioritization, UX simplicity and API strategy.
+                                        </p>
+                                        <p class="text-xs text-theme-textSec/80 pt-1">Author: Aanchal Routela</p>
+                                    </div>
+                                    <div class="pt-2">
+                                        <a href="case study/1.pdf" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-theme-primary hover:bg-theme-primaryHover text-white text-xs font-bold rounded-xl transition-all shadow-lg shadow-theme-primary/15">
+                                            <i class="fa-solid fa-file-pdf"></i> View Complete Breakdown (50 Pages)
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Back -->
+                            <div class="absolute inset-0 bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between shadow-sm rotate-y-180 backface-hidden overflow-y-auto">
+                                <div>
+                                    <div class="flex items-center justify-between mb-4 sticky top-0 bg-theme-surface py-2 border-b border-theme-border/60 z-10">
+                                        <div class="flex items-center gap-2">
+                                            <i class="fa-solid fa-book-open text-theme-primary text-sm"></i>
+                                            <span class="text-xs font-bold text-theme-primary uppercase tracking-wider">Teardown Executive Summary</span>
+                                        </div>
+                                        <button onclick="flipCard('case-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3.5 py-1.5 rounded-lg border border-theme-border transition-colors cursor-pointer shadow-sm">
+                                            <i class="fa-solid fa-rotate"></i> Back
+                                        </button>
+                                    </div>
+                                    <div class="text-xs sm:text-sm text-theme-textSec space-y-4 leading-relaxed pr-2">
+                                        <p class="font-semibold text-theme-textMain">Comparative Product Teardown: ChatGPT vs Claude vs Gemini</p>
+                                        <p>A comparative product teardown across monetization, feature prioritization, UX simplicity and API strategy.</p>
+                                        <p>The AI race is usually framed as a model race. Which model reasons are better? Which one codes better? Which one performs better on benchmarks? But as the underlying models become more capable, model performance is becoming only one part of the product. The more interesting question is what happens after the model becomes good enough.</p>
+                                        <p>I looked at ChatGPT, Claude, and Gemini through four product lenses: monetisation, feature prioritisation, UX simplicity, and API strategy. What emerged is less a story about three similar AI assistants and more a story about three different approaches to building an AI business.</p>
+                                        
+                                        <h4 class="font-bold text-theme-textMain mt-3">Three Products, Three Different Bets:</h4>
+                                        <ul class="list-disc pl-5 space-y-2">
+                                            <li><strong>ChatGPT is building breadth.</strong> OpenAI is expanding ChatGPT from a consumer assistant into a broader AI platform spanning subscriptions, coding, agents, enterprise workflows, advertising, and APIs.</li>
+                                            <li><strong>Claude is building depth.</strong> Anthropic is concentrating more heavily on developers, coding, and professional workflows, where intensive usage and enterprise adoption can translate directly into revenue.</li>
+                                            <li><strong>Gemini is building distribution.</strong> Google has something the others cannot easily replicate: an existing ecosystem across Search, Android, Chrome, Workspace, and Cloud. That gives Gemini a different path to value. It does not have to succeed only as a standalone AI product. It can become part of products people already use every day.</li>
+                                        </ul>
+
+                                        <h4 class="font-bold text-theme-textMain mt-3">Monetisation Is Becoming a Product Decision</h4>
+                                        <p>AI has a difficult monetisation problem. Greater usage increases product value, but intensive usage of frontier models also increases infrastructure costs. Pricing is therefore not simply a financial decision. It is a product decision.</p>
+                                        <p>ChatGPT has built a broad monetisation structure across free users, consumer subscriptions, business, enterprise, and API customers. Claude is more focused on capturing value from increasingly intensive users through its progression from free access to Pro, Max, Team, Enterprise, and API usage. Gemini has a different advantage: Google can use AI to increase the value of an ecosystem that already has enormous reach rather than relying entirely on standalone AI subscriptions.</p>
+
+                                        <h4 class="font-bold text-theme-textMain mt-3">The Feature Race Is Really a Prioritisation Problem</h4>
+                                        <p>The original AI assistant had a simple mental model: ask a question and get an answer. That model is changing. AI products are increasingly combining research, reasoning, tools, creation, coding, iteration, and execution into a single workflow. More capability creates more opportunities to deliver value, but it also creates more complexity.</p>
+                                        <p>ChatGPT is expanding horizontally, adding more tools, workflows, agents, and use cases within one platform. Claude appears more concentrated around professional and developer workflows, particularly coding and agentic tasks. Gemini has another lever: integration. Its capabilities become more useful when they connect naturally with the Google products and services users already work with.</p>
+
+                                        <h4 class="font-bold text-theme-textMain mt-3">The UX Problem: Capability vs Simplicity</h4>
+                                        <p>AI products are becoming significantly more capable, but that capability comes with a UX cost. Users increasingly need to understand which model or tool to use, when to use research, what context is available, what an agent is doing, and where the final output will appear. A 2026 MeasuringU study of 420 U.S. participants found that ChatGPT recorded the highest measured UX-Lite and SUS scores among the products tested, although the differences were not statistically significant.</p>
+                                        <p>The more interesting insight is not the ranking. It is the underlying problem: AI products are accumulating capabilities faster than users can build mental models around them. The next UX advantage may come from reducing the complexity users have to manage without taking away their control.</p>
+
+                                        <h4 class="font-bold text-theme-textMain mt-3">APIs Are Becoming Distribution Channels</h4>
+                                        <p>The consumer interface is only one layer of an AI product. Developers are building applications, workflows, and businesses on top of these models, which makes API strategy strategically important. OpenAI is building a broad developer platform around models, tools, agents, and APIs. Anthropic is connecting Claude closely to developer workflows, with products such as Claude Code turning model capability into a practical professional workflow. Google can connect Gemini to Cloud and its existing enterprise ecosystem. The API is therefore more than another revenue channel; it is also a distribution channel.</p>
+
+                                        <h4 class="font-bold text-theme-textMain mt-3">The Competition Is Moving Beyond the Model</h4>
+                                        <p>Looking across these areas, the strategies become clearer. ChatGPT is expanding the scope of the AI experience. Claude is going deeper into high-value professional workflows. Gemini is using distribution and ecosystem integration to put AI into more of the products people already use. These strategies do not depend entirely on permanent differences in model capability. If model performance continues to converge, differentiation will increasingly come from distribution, workflow integration, developer ecosystems, switching costs, user habits, and monetisation. The product can become more important than the model.</p>
+
+                                        <h4 class="font-bold text-theme-textMain mt-3">The Metric That Matters More Than Response Time</h4>
+                                        <p>Most AI products make it easy to focus on time to response. I think a more useful metric is time to usable outcome. The user does not necessarily want an answer. They want what that answer helps them accomplish: a piece of research, a report, a presentation, a decision, a piece of code, or a completed workflow.</p>
+                                        <p>That changes how the product should be measured. Instead of looking only at response quality and response time, we can measure the journey from user intent to completed outcome by tracking interventions, prompt reformulations, manual edits, time to final output, and where the workflow breaks.</p>
+
+                                        <h4 class="font-bold text-theme-textMain mt-3">From AI Assistant to Work System</h4>
+                                        <p>The AI assistant is evolving from a place where users ask questions into a system that helps them complete work. That creates a new UX challenge: as AI becomes more autonomous, users may need to interact with it less while simultaneously needing greater visibility into what it is doing (e.g., Research completed, Analysis in progress, Synthesis underway, Final output pending). The goal is not to expose every system process, but to give users enough visibility to understand where the work stands and enough control to intervene when necessary.</p>
+
+                                        <h4 class="font-bold text-theme-textMain mt-3">CTRL + THINK</h4>
+                                        <p>ChatGPT, Claude, and Gemini are increasingly operating at a similar technological frontier, but they are taking different approaches to turning that technology into a product. ChatGPT is building breadth. Claude is building depth. Gemini is building distribution.</p>
+                                        <p>The next phase of AI competition may therefore be determined less by who has the strongest model at a given moment and more by who can turn increasingly capable AI into a valuable, repeatable, and scalable workflow. The AI product is moving beyond helping users think. It is increasingly becoming responsible for what happens after thinking.</p>
+                                        <p class="italic text-theme-textSec/90 pt-2">I’ve included the full teardown on my portfolio, covering the monetisation analysis, feature prioritisation, UX evaluation, API strategy, user segmentation, competitive landscape, metrics, recommendations, and roadmap.</p>
+                                    </div>
+                                </div>
+                                <div class="pt-4 mt-4 border-t border-theme-border/60 flex justify-between items-center bg-theme-surface sticky bottom-0 py-2">
+                                    <span class="text-xs text-theme-textSec">Scroll to read full summary</span>
+                                    <a href="case study/1.pdf" target="_blank" class="px-4 py-2 bg-theme-primary hover:bg-theme-primaryHover text-white text-xs font-bold rounded-lg transition-all shadow-md">
+                                        <i class="fa-solid fa-file-pdf"></i> Download PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
