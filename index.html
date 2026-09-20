@@ -43,9 +43,11 @@
         }
         .transform-style-3d {
             transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .backface-hidden {
             backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
         }
         .rotate-y-180 {
             transform: rotateY(180deg);
@@ -99,11 +101,14 @@
                 <span class="w-3 h-3 bg-theme-primary rounded-full animate-pulse"></span>
                 <span>Aanchal Routela</span>
             </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-theme-textSec">
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-theme-textSec">
                 <a href="#about" class="hover:text-theme-primary transition-colors">About</a>
+                <a href="#experience" class="hover:text-theme-primary transition-colors">Experience</a>
                 <a href="#skills" class="hover:text-theme-primary transition-colors">Skills</a>
                 <a href="#projects" class="hover:text-theme-primary transition-colors">Projects</a>
                 <a href="#education" class="hover:text-theme-primary transition-colors">Education</a>
+                <a href="#certificates" class="hover:text-theme-primary transition-colors">Certificates</a>
+                <a href="#resume" class="hover:text-theme-primary transition-colors">Resume</a>
                 <a href="#contact" class="hover:text-theme-primary transition-colors">Contact</a>
             </nav>
             <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-theme-primary hover:bg-theme-primaryHover rounded-lg transition-all shadow-lg shadow-theme-primary/15">
@@ -142,7 +147,7 @@
                     </a>
                 </div>
 
-                <!-- Social Links Bar -->
+                <!-- Hero Quick Social Links -->
                 <div class="flex justify-center items-center gap-6 mt-12 text-theme-textSec">
                     <a href="mailto:aanchalroutela01@gmail.com" class="hover:text-theme-primary transition-colors text-lg" title="Email"><i class="fa-solid fa-envelope"></i></a>
                     <a href="https://www.linkedin.com/in/aanchalroutela" target="_blank" class="hover:text-theme-primary transition-colors text-lg" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
@@ -157,16 +162,84 @@
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-6 flex items-center gap-3">
                     <span class="w-8 h-1 bg-theme-primary rounded-full"></span> About Me
                 </h2>
-                <div class="bg-theme-surface border border-theme-border p-8 rounded-2xl glow-effect shadow-sm min-h-[140px]">
+                <div class="bg-theme-surface border border-theme-border p-8 rounded-2xl glow-effect shadow-sm mb-8">
                     <p class="text-theme-textSec text-lg leading-relaxed">
                         <span id="about-typing-text"></span><span class="typing-cursor about-cursor">&nbsp;</span>
                     </p>
+                </div>
+
+                <!-- Styled Action Buttons for About Section -->
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="mailto:aanchalroutela01@gmail.com" class="px-5 py-3 rounded-xl bg-theme-surface hover:bg-theme-surfaceHover border border-theme-primary/40 text-theme-textMain hover:text-theme-primary text-sm font-semibold transition-all shadow-md flex items-center gap-2.5">
+                        <i class="fa-solid fa-envelope text-theme-primary text-base"></i>
+                        <span>Email Me</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aanchalroutela" target="_blank" class="px-5 py-3 rounded-xl bg-[#0A66C2]/15 hover:bg-[#0A66C2]/25 border border-[#0A66C2]/50 text-theme-textMain hover:text-[#0A66C2] text-sm font-semibold transition-all shadow-md flex items-center gap-2.5">
+                        <i class="fa-brands fa-linkedin text-[#0A66C2] text-base"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/23f2004126" target="_blank" class="px-5 py-3 rounded-xl bg-theme-bg hover:bg-theme-surfaceHover border border-theme-border text-theme-textMain hover:text-theme-primary text-sm font-semibold transition-all shadow-md flex items-center gap-2.5">
+                        <i class="fa-brands fa-github text-base"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 px-6 border-t border-theme-border">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-8 flex items-center gap-3">
+                    <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Work Experience
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Explified AI Product Manager Internship Card (Flippable & Flexible) -->
+                    <div class="perspective-1000 w-full">
+                        <div id="card-exp-1" class="relative w-full duration-700 transform-style-3d shadow-md rounded-xl">
+                            <!-- Front -->
+                            <div class="bg-theme-surface border border-theme-border p-6 rounded-xl flex flex-col justify-between shadow-sm min-h-[160px] backface-hidden">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="px-2.5 py-0.5 bg-theme-accentBg text-theme-primary border border-theme-primary/30 text-[11px] font-bold rounded-md uppercase tracking-wider">Internship</span>
+                                            <span class="text-xs text-theme-textSec">Sept 2026 – Current</span>
+                                        </div>
+                                        <h3 class="text-lg font-bold text-theme-textMain mt-2">AI Product Manager</h3>
+                                        <p class="text-sm font-medium text-theme-primary">Explified</p>
+                                    </div>
+                                    <button onclick="flipCard('exp-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 shrink-0">
+                                        <i class="fa-solid fa-rotate"></i> Flip
+                                    </button>
+                                </div>
+                                <p class="text-xs text-theme-textSec mt-4 pt-3 border-t border-theme-border/60">
+                                    Click flip to view responsibilities & key contributions.
+                                </p>
+                            </div>
+                            <!-- Back -->
+                            <div class="absolute inset-0 bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm flex flex-col justify-between rotate-y-180 backface-hidden">
+                                <div>
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">Key Responsibilities</span>
+                                        <button onclick="flipCard('exp-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors">
+                                            <i class="fa-solid fa-rotate"></i> Back
+                                        </button>
+                                    </div>
+                                    <ul class="text-xs text-theme-textSec space-y-2 list-disc pl-4 leading-relaxed">
+                                        <li>Driving product discovery, AI roadmap planning, and feature scoping for AI solutions.</li>
+                                        <li>Collaborating cross-functionally with engineering and design to define clear user stories and PRDs.</li>
+                                        <li>[Details will be updated as internship progresses]</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-24 px-6 border-t border-theme-border">
+        <section id="skills" class="py-24 px-6 border-t border-theme-border bg-theme-surface/30">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-10 flex items-center gap-3">
                     <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Skills & Expertise
@@ -179,63 +252,25 @@
                             <i class="fa-solid fa-compass-drafting text-theme-primary"></i> Skills
                         </h3>
                         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-theme-textSec">
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> Product Discovery
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> User Research
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> Problem Definition
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> User Stories & Acceptance Criteria
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> Product Requirements & PRDs
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> Feature Prioritisation
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> Product Documentation
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> Product Roadmapping
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> Agile / Scrum
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> Cross-Functional Collaboration
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> AI Product
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> AI Product Thinking
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> Generative AI
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> LLM Applications
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> Prompt Engineering
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> RAG
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> AI Agents
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> AI Evaluation
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-check text-theme-primary text-xs"></i> Data-Driven Product Analysis
-                            </div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Product Discovery</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> User Research</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Problem Definition</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> User Stories & Acceptance Criteria</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Product Requirements & PRDs</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Feature Prioritisation</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Product Documentation</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Product Roadmapping</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Agile / Scrum</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Cross-Functional Collaboration</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> AI Product</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> AI Product Thinking</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Generative AI</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> LLM Applications</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Prompt Engineering</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> RAG</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> AI Agents</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> AI Evaluation</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Data-Driven Product Analysis</div>
                         </div>
                     </div>
 
@@ -245,18 +280,10 @@
                             <i class="fa-solid fa-toolbox text-theme-primary"></i> Tools
                         </h3>
                         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-theme-textSec">
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-brands fa-jira text-theme-primary text-xs"></i> JIRA
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-chart-bar text-theme-primary text-xs"></i> POWER BI
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-file-excel text-theme-primary text-xs"></i> EXCEL
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-brands fa-github text-theme-primary text-xs"></i> GITHUB
-                            </div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-brands fa-jira text-theme-primary text-xs"></i> JIRA</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-chart-bar text-theme-primary text-xs"></i> POWER BI</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-file-excel text-theme-primary text-xs"></i> EXCEL</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-brands fa-github text-theme-primary text-xs"></i> GITHUB</div>
                         </div>
                     </div>
 
@@ -266,39 +293,17 @@
                             <i class="fa-solid fa-code text-theme-primary"></i> Tech Skills
                         </h3>
                         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-theme-textSec">
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-terminal text-theme-primary text-xs"></i> PYTHON
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-database text-theme-primary text-xs"></i> SQL
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-table text-theme-primary text-xs"></i> PANDAS
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-square-root-variable text-theme-primary text-xs"></i> NUMPY
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-brain text-theme-primary text-xs"></i> SCIKIT-LEARN
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-network-wired text-theme-primary text-xs"></i> TENSORFLOW
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-bolt text-theme-primary text-xs"></i> FASTAPI
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-flask text-theme-primary text-xs"></i> FLASK
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-link text-theme-primary text-xs"></i> LANGCHAIN
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-solid fa-magnifying-glass text-theme-primary text-xs"></i> FAISS
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60">
-                                <i class="fa-brands fa-git-alt text-theme-primary text-xs"></i> GIT
-                            </div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-terminal text-theme-primary text-xs"></i> PYTHON</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-database text-theme-primary text-xs"></i> SQL</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-table text-theme-primary text-xs"></i> PANDAS</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-square-root-variable text-theme-primary text-xs"></i> NUMPY</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-brain text-theme-primary text-xs"></i> SCIKIT-LEARN</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-network-wired text-theme-primary text-xs"></i> TENSORFLOW</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-bolt text-theme-primary text-xs"></i> FASTAPI</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-flask text-theme-primary text-xs"></i> FLASK</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-link text-theme-primary text-xs"></i> LANGCHAIN</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-magnifying-glass text-theme-primary text-xs"></i> FAISS</div>
+                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-brands fa-git-alt text-theme-primary text-xs"></i> GIT</div>
                         </div>
                     </div>
                 </div>
@@ -306,7 +311,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-24 px-6 border-t border-theme-border bg-theme-surface/30">
+        <section id="projects" class="py-24 px-6 border-t border-theme-border">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-4 flex items-center gap-3">
                     <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Featured Projects
@@ -318,21 +323,17 @@
                     <!-- Project 1: Sonik -->
                     <div class="perspective-1000 w-full">
                         <div id="card-1" class="relative w-full duration-700 transform-style-3d shadow-md rounded-2xl">
-                            
-                            <!-- Front of Card -->
-                            <div class="absolute inset-0 backface-hidden bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between overflow-hidden relative shadow-sm" style="position: relative; height: auto; min-height: 100%;">
+                            <!-- Front -->
+                            <div class="bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between shadow-sm backface-hidden">
                                 <div class="space-y-4">
                                     <div class="flex items-center justify-between">
-                                        <span class="px-3.5 py-1 bg-theme-accentBg text-theme-primary text-xs font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> AI Retail Platform</span>
+                                        <span class="px-3 py-1 bg-theme-accentBg text-theme-primary text-xs font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> AI Retail Platform</span>
                                         <button onclick="flipCard('1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3.5 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
                                             <i class="fa-solid fa-rotate"></i> Flip Card
                                         </button>
                                     </div>
-                                    
-                                    <div class="w-full aspect-square bg-theme-bg border border-theme-border/70 rounded-xl relative flex items-center justify-center overflow-hidden shadow-inner">
-                                        <img src="2.jpg" 
-                                             alt="Sonik: Smart Retail Management System Logo" 
-                                             class="w-full h-full object-cover" />
+                                    <div class="w-full aspect-video bg-theme-bg border border-theme-border/70 rounded-xl relative flex items-center justify-center overflow-hidden shadow-inner">
+                                        <img src="2.jpg" alt="Sonik: Smart Retail Management System Logo" class="w-full h-full object-cover" />
                                     </div>
                                     <div class="space-y-2">
                                         <h3 class="text-base font-bold text-theme-textMain">Sonik: Smart Retail Management System <a href="https://github.com/23f2004126/Software_Engineering_Project" target="_blank" class="text-xs text-theme-primary hover:underline ml-2 font-normal">(view)</a></h3>
@@ -341,7 +342,6 @@
                                         </p>
                                     </div>
                                 </div>
-
                                 <div class="space-y-3.5 pt-4">
                                     <div class="flex flex-wrap gap-1.5">
                                         <span class="text-xs bg-theme-bg border border-theme-border/60 text-theme-textSec px-2.5 py-1 rounded-md">Agile / Scrum</span>
@@ -358,9 +358,8 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Back of Card -->
-                            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between overflow-hidden shadow-sm" style="position: absolute; height: 100%; top: 0; left: 0;">
+                            <!-- Back -->
+                            <div class="absolute inset-0 bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between shadow-sm rotate-y-180 backface-hidden">
                                 <div class="space-y-4">
                                     <div class="flex items-center justify-between">
                                         <span class="px-3.5 py-1 bg-theme-accentBg text-theme-primary text-xs font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Key Highlights</span>
@@ -375,7 +374,7 @@
                                         <li>Drove feedback-led product iteration including integrated payments and automated reports.</li>
                                     </ul>
                                 </div>
-                                <div class="grid grid-cols-2 gap-2">
+                                <div class="grid grid-cols-2 gap-2 pt-4">
                                     <button onclick="openModal('modal-1')" class="py-3 bg-theme-bg hover:bg-theme-bg/80 text-theme-textMain text-xs font-semibold rounded-xl transition-all border border-theme-border flex items-center justify-center gap-1.5 cursor-pointer shadow-sm">
                                         <i class="fa-solid fa-arrow-up-right-from-square text-theme-primary"></i> Details
                                     </button>
@@ -384,30 +383,24 @@
                                     </a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
                     <!-- Project 2: Grocery Gateway -->
                     <div class="perspective-1000 w-full">
                         <div id="card-2" class="relative w-full duration-700 transform-style-3d shadow-md rounded-2xl">
-                            
-                            <!-- Front of Card -->
-                            <div class="absolute inset-0 backface-hidden bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between overflow-hidden relative shadow-sm" style="position: relative; height: auto; min-height: 100%;">
+                            <!-- Front -->
+                            <div class="bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between shadow-sm backface-hidden">
                                 <div class="space-y-4">
                                     <div class="flex items-center justify-between">
-                                        <span class="px-3.5 py-1 bg-theme-accentBg text-theme-primary text-xs font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Product Analytics</span>
+                                        <span class="px-3 py-1 bg-theme-accentBg text-theme-primary text-xs font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Product Analytics</span>
                                         <button onclick="flipCard('2')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3.5 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
                                             <i class="fa-solid fa-rotate"></i> Flip Card
                                         </button>
                                     </div>
-                                    
-                                    <div class="w-full aspect-square bg-theme-bg border border-theme-border/70 rounded-xl relative flex items-center justify-center overflow-hidden shadow-inner">
-                                        <img src="1.jpg" 
-                                             alt="Vinod Store Business Data Management Logo" 
-                                             class="w-full h-full object-cover" />
+                                    <div class="w-full aspect-video bg-theme-bg border border-theme-border/70 rounded-xl relative flex items-center justify-center overflow-hidden shadow-inner">
+                                        <img src="1.jpg" alt="Vinod Store Business Data Management Logo" class="w-full h-full object-cover" />
                                     </div>
-
                                     <div class="space-y-2">
                                         <h3 class="text-base font-bold text-theme-textMain">Grocery Gateway: Unrevealing the Market Mastery of Vinod Store <a href="https://github.com/23f2004126/BDM_Proj/tree/main/BDM_project" target="_blank" class="text-xs text-theme-primary hover:underline ml-2 font-normal">(view)</a></h3>
                                         <p class="text-theme-textSec text-sm leading-relaxed">
@@ -415,7 +408,6 @@
                                         </p>
                                     </div>
                                 </div>
-
                                 <div class="space-y-3.5 pt-4">
                                     <div class="flex flex-wrap gap-1.5">
                                         <span class="text-xs bg-theme-bg border border-theme-border/60 text-theme-textSec px-2.5 py-1 rounded-md">Data Analytics</span>
@@ -432,9 +424,8 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Back of Card -->
-                            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between overflow-hidden shadow-sm" style="position: absolute; height: 100%; top: 0; left: 0;">
+                            <!-- Back -->
+                            <div class="absolute inset-0 bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between shadow-sm rotate-y-180 backface-hidden">
                                 <div class="space-y-4">
                                     <div class="flex items-center justify-between">
                                         <span class="px-3.5 py-1 bg-theme-accentBg text-theme-primary text-xs font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Key Findings</span>
@@ -449,7 +440,7 @@
                                         <li>Converted raw data into actionable decision-support frameworks for small business stakeholders.</li>
                                     </ul>
                                 </div>
-                                <div class="grid grid-cols-2 gap-2">
+                                <div class="grid grid-cols-2 gap-2 pt-4">
                                     <button onclick="openModal('modal-2')" class="py-3 bg-theme-bg hover:bg-theme-bg/80 text-theme-textMain text-xs font-semibold rounded-xl transition-all border border-theme-border flex items-center justify-center gap-1.5 cursor-pointer shadow-sm">
                                         <i class="fa-solid fa-arrow-up-right-from-square text-theme-primary"></i> Details
                                     </button>
@@ -458,30 +449,24 @@
                                     </a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
                     <!-- Project 3: Virtual Teaching Assistant -->
                     <div class="perspective-1000 w-full lg:col-span-2 lg:max-w-xl lg:mx-auto">
                         <div id="card-3" class="relative w-full duration-700 transform-style-3d shadow-md rounded-2xl">
-
-                            <!-- Front of Card -->
-                            <div class="absolute inset-0 backface-hidden bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between overflow-hidden relative shadow-sm" style="position: relative; height: auto; min-height: 100%;">
+                            <!-- Front -->
+                            <div class="bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between shadow-sm backface-hidden">
                                 <div class="space-y-4">
                                     <div class="flex items-center justify-between">
-                                        <span class="px-3.5 py-1 bg-theme-accentBg text-theme-primary text-xs font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> GenAI / RAG Platform</span>
+                                        <span class="px-3 py-1 bg-theme-accentBg text-theme-primary text-xs font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> GenAI / RAG Platform</span>
                                         <button onclick="flipCard('3')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3.5 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
                                             <i class="fa-solid fa-rotate"></i> Flip Card
                                         </button>
                                     </div>
-
-                                    <div class="w-full aspect-square bg-theme-bg border border-theme-border/70 rounded-xl relative flex items-center justify-center overflow-hidden shadow-inner">
-                                        <img src="3.jpg"
-                                             alt="TDS Virtual TA Logo"
-                                             class="w-full h-full object-cover" />
+                                    <div class="w-full aspect-video bg-theme-bg border border-theme-border/70 rounded-xl relative flex items-center justify-center overflow-hidden shadow-inner">
+                                        <img src="3.jpg" alt="TDS Virtual TA Logo" class="w-full h-full object-cover" />
                                     </div>
-
                                     <div class="space-y-2">
                                         <h3 class="text-base font-bold text-theme-textMain">Virtual Teaching Assistant <a href="https://github.com/23f2004126/virtualta-project" target="_blank" class="text-xs text-theme-primary hover:underline ml-2 font-normal">(view)</a></h3>
                                         <p class="text-theme-textSec text-sm leading-relaxed">
@@ -489,7 +474,6 @@
                                         </p>
                                     </div>
                                 </div>
-
                                 <div class="space-y-3.5 pt-4">
                                     <div class="flex flex-wrap gap-1.5">
                                         <span class="text-xs bg-theme-bg border border-theme-border/60 text-theme-textSec px-2.5 py-1 rounded-md">RAG Pipeline</span>
@@ -506,9 +490,8 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Back of Card -->
-                            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between overflow-hidden shadow-sm" style="position: absolute; height: 100%; top: 0; left: 0;">
+                            <!-- Back -->
+                            <div class="absolute inset-0 bg-theme-surface border border-theme-border rounded-2xl p-7 flex flex-col justify-between shadow-sm rotate-y-180 backface-hidden">
                                 <div class="space-y-4">
                                     <div class="flex items-center justify-between">
                                         <span class="px-3.5 py-1 bg-theme-accentBg text-theme-primary text-xs font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Key Highlights</span>
@@ -523,7 +506,7 @@
                                         <li>Exposed a multimodal REST API supporting text and image inputs, built for automated rubric-based evaluation.</li>
                                     </ul>
                                 </div>
-                                <div class="grid grid-cols-2 gap-2">
+                                <div class="grid grid-cols-2 gap-2 pt-4">
                                     <button onclick="openModal('modal-3')" class="py-3 bg-theme-bg hover:bg-theme-bg/80 text-theme-textMain text-xs font-semibold rounded-xl transition-all border border-theme-border flex items-center justify-center gap-1.5 cursor-pointer shadow-sm">
                                         <i class="fa-solid fa-arrow-up-right-from-square text-theme-primary"></i> Details
                                     </button>
@@ -532,7 +515,6 @@
                                     </a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -540,150 +522,150 @@
             </div>
         </section>
 
-        <!-- Education & Certifications Section -->
-        <section id="education" class="py-24 px-6 border-t border-theme-border">
-            <div class="max-w-4xl mx-auto flex flex-col gap-16">
-                <!-- Education -->
-                <div>
-                    <h2 class="text-2xl font-bold text-theme-textMain mb-8 flex items-center gap-3">
-                        <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Education
-                    </h2>
-                    <div class="space-y-6">
-                        
-                        <!-- IIT Madras Card (Flippable) -->
-                        <div class="perspective-1000 w-full">
-                            <div id="card-edu-1" class="relative w-full duration-700 transform-style-3d shadow-md rounded-xl">
-                                <!-- Front of Card -->
-                                <div class="absolute inset-0 backface-hidden bg-theme-surface border border-theme-border p-6 rounded-xl flex flex-col justify-between shadow-sm" style="position: relative; height: auto; min-height: 100%;">
-                                    <div class="flex items-start justify-between">
-                                        <div>
-                                            <span class="text-xs font-bold text-theme-primary uppercase tracking-wider">2023–Present</span>
-                                            <h3 class="text-lg font-bold text-theme-textMain mt-1">Indian Institute of Technology Madras</h3>
-                                            <p class="text-sm text-theme-textSec">Bachelors in Data Science and Applications</p>
-                                            <p class="text-xs text-theme-textSec/70 mt-2">Chennai, Tamil Nadu</p>
-                                        </div>
-                                        <button onclick="flipCard('edu-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3.5 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
-                                            <i class="fa-solid fa-rotate"></i> Flip
-                                        </button>
+        <!-- Education Section -->
+        <section id="education" class="py-24 px-6 border-t border-theme-border bg-theme-surface/30">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-theme-textMain mb-8 flex items-center gap-3">
+                    <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Education
+                </h2>
+                <div class="space-y-6">
+                    <!-- IIT Madras Card (Flippable & Flexible) -->
+                    <div class="perspective-1000 w-full">
+                        <div id="card-edu-1" class="relative w-full duration-700 transform-style-3d shadow-md rounded-xl">
+                            <!-- Front -->
+                            <div class="bg-theme-surface border border-theme-border p-6 rounded-xl flex flex-col justify-between shadow-sm backface-hidden">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <span class="text-xs font-bold text-theme-primary uppercase tracking-wider">2023–Present</span>
+                                        <h3 class="text-lg font-bold text-theme-textMain mt-1">Indian Institute of Technology Madras</h3>
+                                        <p class="text-sm text-theme-textSec">Bachelors in Data Science and Applications</p>
+                                        <p class="text-xs text-theme-textSec/70 mt-1">Chennai, Tamil Nadu</p>
                                     </div>
-                                    <div class="mt-4 pt-4 border-t border-theme-border/80 space-y-2">
-                                        <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider block mb-1.5 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Minors</span>
-                                        <div class="flex flex-wrap gap-2">
-                                            <div class="flex items-center gap-2 bg-theme-bg px-3 py-2 rounded-lg border border-theme-border/60 text-xs text-theme-textMain font-medium">
-                                                <i class="fa-solid fa-microchip text-theme-primary text-[10px]"></i> Generative AI
-                                            </div>
-                                            <div class="flex items-center gap-2 bg-theme-bg px-3 py-2 rounded-lg border border-theme-border/60 text-xs text-theme-textMain font-medium">
-                                                <i class="fa-solid fa-cloud text-theme-primary text-[10px]"></i> Cloud Computing for AI
-                                            </div>
+                                    <button onclick="flipCard('edu-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3.5 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
+                                        <i class="fa-solid fa-rotate"></i> Flip
+                                    </button>
+                                </div>
+                                <div class="mt-4 pt-4 border-t border-theme-border/80 space-y-2">
+                                    <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider block mb-1.5 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Minors</span>
+                                    <div class="flex flex-wrap gap-2">
+                                        <div class="flex items-center gap-2 bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border/60 text-xs text-theme-textMain font-medium">
+                                            <i class="fa-solid fa-microchip text-theme-primary text-[10px]"></i> Generative AI
+                                        </div>
+                                        <div class="flex items-center gap-2 bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border/60 text-xs text-theme-textMain font-medium">
+                                            <i class="fa-solid fa-cloud text-theme-primary text-[10px]"></i> Cloud Computing for AI
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Back of Card (Courses) -->
-                                <div class="absolute inset-0 backface-hidden rotate-y-180 bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm flex flex-col" style="position: absolute; height: 100%; top: 0; left: 0;">
-                                    <div class="flex items-start justify-between mb-4">
+                            </div>
+                            <!-- Back -->
+                            <div class="absolute inset-0 bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm flex flex-col justify-between rotate-y-180 backface-hidden">
+                                <div>
+                                    <div class="flex items-start justify-between mb-3">
                                         <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Relevant Courses</span>
-                                        <button onclick="flipCard('edu-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3.5 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
+                                        <button onclick="flipCard('edu-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors">
                                             <i class="fa-solid fa-rotate"></i> Back
                                         </button>
                                     </div>
-                                    <div class="flex flex-wrap gap-2 text-xs text-theme-textSec leading-relaxed">
-                                        <span class="bg-theme-bg px-3 py-1.5 rounded-md border border-theme-border/60">MLops</span>
-                                        <span class="bg-theme-bg px-3 py-1.5 rounded-md border border-theme-border/60">Big Data</span>
-                                        <span class="bg-theme-bg px-3 py-1.5 rounded-md border border-theme-border/60">Deep Learning</span>
-                                        <span class="bg-theme-bg px-3 py-1.5 rounded-md border border-theme-border/60">AI</span>
-                                        <span class="bg-theme-bg px-3 py-1.5 rounded-md border border-theme-border/60">Software Testing</span>
-                                        <span class="bg-theme-bg px-3 py-1.5 rounded-md border border-theme-border/60">Software Engineering</span>
-                                        <span class="bg-theme-bg px-3 py-1.5 rounded-md border border-theme-border/60">DLP (LLM, Speech, Vision)</span>
-                                        <span class="bg-theme-bg px-3 py-1.5 rounded-md border border-theme-border/60">Maths for GenAI</span>
-                                        <span class="bg-theme-bg px-3 py-1.5 rounded-md border border-theme-border/60">LLM</span>
-                                        <span class="bg-theme-bg px-3 py-1.5 rounded-md border border-theme-border/60">Managerial Economics</span>
-                                        <span class="bg-theme-bg px-3 py-1.5 rounded-md border border-theme-border/60">C Programming</span>
-                                        <span class="bg-theme-bg px-3 py-1.5 rounded-md border border-theme-border/60">Design Thinking for Data-Driven App Dev</span>
+                                    <div class="flex flex-wrap gap-1.5 text-xs text-theme-textSec leading-relaxed">
+                                        <span class="bg-theme-bg px-2.5 py-1 rounded-md border border-theme-border/60">MLops</span>
+                                        <span class="bg-theme-bg px-2.5 py-1 rounded-md border border-theme-border/60">Big Data</span>
+                                        <span class="bg-theme-bg px-2.5 py-1 rounded-md border border-theme-border/60">Deep Learning</span>
+                                        <span class="bg-theme-bg px-2.5 py-1 rounded-md border border-theme-border/60">AI</span>
+                                        <span class="bg-theme-bg px-2.5 py-1 rounded-md border border-theme-border/60">Software Testing</span>
+                                        <span class="bg-theme-bg px-2.5 py-1 rounded-md border border-theme-border/60">Software Engineering</span>
+                                        <span class="bg-theme-bg px-2.5 py-1 rounded-md border border-theme-border/60">DLP (LLM, Speech, Vision)</span>
+                                        <span class="bg-theme-bg px-2.5 py-1 rounded-md border border-theme-border/60">Maths for GenAI</span>
+                                        <span class="bg-theme-bg px-2.5 py-1 rounded-md border border-theme-border/60">LLM</span>
+                                        <span class="bg-theme-bg px-2.5 py-1 rounded-md border border-theme-border/60">Managerial Economics</span>
+                                        <span class="bg-theme-bg px-2.5 py-1 rounded-md border border-theme-border/60">C Programming</span>
+                                        <span class="bg-theme-bg px-2.5 py-1 rounded-md border border-theme-border/60">Design Thinking</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Panchsheel Public School -->
-                        <div class="bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm">
-                            <span class="text-xs font-bold text-theme-primary uppercase tracking-wider">2020–2023</span>
-                            <h3 class="text-lg font-bold text-theme-textMain mt-1">Panchsheel Public School</h3>
-                            <p class="text-sm text-theme-textSec">Intermediate & Matriculation (CBSE)</p>
-                            <p class="text-xs text-theme-textSec/70 mt-2">Delhi, India</p>
-                        </div>
+                    <!-- Panchsheel Public School -->
+                    <div class="bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm">
+                        <span class="text-xs font-bold text-theme-primary uppercase tracking-wider">2020–2023</span>
+                        <h3 class="text-lg font-bold text-theme-textMain mt-1">Panchsheel Public School</h3>
+                        <p class="text-sm text-theme-textSec">Intermediate & Matriculation (CBSE)</p>
+                        <p class="text-xs text-theme-textSec/70 mt-1">Delhi, India</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Certifications -->
-                <div>
-                    <h2 class="text-2xl font-bold text-theme-textMain mb-8 flex items-center gap-3">
-                        <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Certifications
-                    </h2>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        
-                        <!-- Certification 1 Card -->
-                        <div class="perspective-1000 w-full">
-                            <div id="card-cert-1" class="relative w-full duration-700 transform-style-3d shadow-md rounded-xl">
-                                <!-- Front -->
-                                <div class="absolute inset-0 backface-hidden bg-theme-surface border border-theme-border p-6 rounded-xl flex items-center justify-between shadow-sm" style="position: relative; height: auto; min-height: 100%;">
-                                    <div class="flex items-start gap-4">
-                                        <div class="w-10 h-10 rounded-lg bg-theme-accentBg border border-theme-primary/20 flex items-center justify-center text-theme-primary shrink-0">
-                                            <i class="fa-solid fa-certificate"></i>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-base font-bold text-theme-textMain">SQL (Intermediate)</h3>
-                                            <p class="text-sm text-theme-textSec">HackerRank</p>
-                                        </div>
+        <!-- Certifications Section -->
+        <section id="certificates" class="py-24 px-6 border-t border-theme-border">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-theme-textMain mb-8 flex items-center gap-3">
+                    <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Certifications
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    
+                    <!-- Certification 1 Card -->
+                    <div class="perspective-1000 w-full">
+                        <div id="card-cert-1" class="relative w-full duration-700 transform-style-3d shadow-md rounded-xl">
+                            <!-- Front -->
+                            <div class="bg-theme-surface border border-theme-border p-6 rounded-xl flex items-center justify-between shadow-sm min-h-[120px] backface-hidden">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-lg bg-theme-accentBg border border-theme-primary/20 flex items-center justify-center text-theme-primary shrink-0">
+                                        <i class="fa-solid fa-certificate"></i>
                                     </div>
-                                    <button onclick="flipCard('cert-1')" class="text-xs text-theme-textSec hover:text-theme-textMain bg-theme-bg px-2 py-1.5 rounded-md border border-theme-border transition-colors">
+                                    <div>
+                                        <h3 class="text-base font-bold text-theme-textMain">SQL (Intermediate)</h3>
+                                        <p class="text-sm text-theme-textSec">HackerRank</p>
+                                    </div>
+                                </div>
+                                <button onclick="flipCard('cert-1')" class="text-xs text-theme-textSec hover:text-theme-textMain bg-theme-bg px-2.5 py-1.5 rounded-md border border-theme-border transition-colors shrink-0">
+                                    <i class="fa-solid fa-rotate"></i>
+                                </button>
+                            </div>
+                            <!-- Back -->
+                            <div class="absolute inset-0 bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm flex flex-col justify-between rotate-y-180 backface-hidden">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">Skills Acquired</span>
+                                    <button onclick="flipCard('cert-1')" class="text-xs text-theme-textSec hover:text-theme-textMain">
                                         <i class="fa-solid fa-rotate"></i>
                                     </button>
                                 </div>
-                                <!-- Back -->
-                                <div class="absolute inset-0 backface-hidden rotate-y-180 bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm flex flex-col justify-center" style="position: absolute; height: 100%; top: 0; left: 0;">
-                                    <div class="flex justify-between items-start mb-2">
-                                        <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">Skills Acquired</span>
-                                        <button onclick="flipCard('cert-1')" class="text-xs text-theme-textSec hover:text-theme-textMain">
-                                            <i class="fa-solid fa-rotate"></i>
-                                        </button>
-                                    </div>
-                                    <p class="text-xs text-theme-textSec italic">Skills to be updated in the future.</p>
-                                </div>
+                                <p class="text-xs text-theme-textSec italic">Complex Joins, Aggregations, Subqueries, Indexing.</p>
                             </div>
                         </div>
-
-                        <!-- Certification 2 Card -->
-                        <div class="perspective-1000 w-full">
-                            <div id="card-cert-2" class="relative w-full duration-700 transform-style-3d shadow-md rounded-xl">
-                                <!-- Front -->
-                                <div class="absolute inset-0 backface-hidden bg-theme-surface border border-theme-border p-6 rounded-xl flex items-center justify-between shadow-sm" style="position: relative; height: auto; min-height: 100%;">
-                                    <div class="flex items-start gap-4">
-                                        <div class="w-10 h-10 rounded-lg bg-theme-accentBg border border-theme-primary/20 flex items-center justify-center text-theme-primary shrink-0">
-                                            <i class="fa-solid fa-award"></i>
-                                        </div>
-                                        <div>
-                                            <h3 class="text-base font-bold text-theme-textMain leading-tight">Product Management Virtual Experience</h3>
-                                            <p class="text-sm text-theme-textSec mt-1">Forage</p>
-                                        </div>
-                                    </div>
-                                    <button onclick="flipCard('cert-2')" class="text-xs text-theme-textSec hover:text-theme-textMain bg-theme-bg px-2 py-1.5 rounded-md border border-theme-border transition-colors">
-                                        <i class="fa-solid fa-rotate"></i>
-                                    </button>
-                                </div>
-                                <!-- Back -->
-                                <div class="absolute inset-0 backface-hidden rotate-y-180 bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm flex flex-col justify-center" style="position: absolute; height: 100%; top: 0; left: 0;">
-                                    <div class="flex justify-between items-start mb-2">
-                                        <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">Skills Acquired</span>
-                                        <button onclick="flipCard('cert-2')" class="text-xs text-theme-textSec hover:text-theme-textMain">
-                                            <i class="fa-solid fa-rotate"></i>
-                                        </button>
-                                    </div>
-                                    <p class="text-xs text-theme-textSec italic">Skills to be updated in the future.</p>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
+
+                    <!-- Certification 2 Card -->
+                    <div class="perspective-1000 w-full">
+                        <div id="card-cert-2" class="relative w-full duration-700 transform-style-3d shadow-md rounded-xl">
+                            <!-- Front -->
+                            <div class="bg-theme-surface border border-theme-border p-6 rounded-xl flex items-center justify-between shadow-sm min-h-[120px] backface-hidden">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-lg bg-theme-accentBg border border-theme-primary/20 flex items-center justify-center text-theme-primary shrink-0">
+                                        <i class="fa-solid fa-award"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-bold text-theme-textMain leading-tight">Product Management Virtual Experience</h3>
+                                        <p class="text-sm text-theme-textSec mt-1">Forage</p>
+                                    </div>
+                                </div>
+                                <button onclick="flipCard('cert-2')" class="text-xs text-theme-textSec hover:text-theme-textMain bg-theme-bg px-2.5 py-1.5 rounded-md border border-theme-border transition-colors shrink-0">
+                                    <i class="fa-solid fa-rotate"></i>
+                                </button>
+                            </div>
+                            <!-- Back -->
+                            <div class="absolute inset-0 bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm flex flex-col justify-between rotate-y-180 backface-hidden">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">Skills Acquired</span>
+                                    <button onclick="flipCard('cert-2')" class="text-xs text-theme-textSec hover:text-theme-textMain">
+                                        <i class="fa-solid fa-rotate"></i>
+                                    </button>
+                                </div>
+                                <p class="text-xs text-theme-textSec italic">Market Research, Feature Scoping, PRD Drafting, User Testing.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -694,7 +676,7 @@
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-4 flex items-center gap-3">
                     <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Case Studies
                 </h2>
-                <p class="text-theme-textSec mb-8">We will update the case study section later. Stay tuned for detailed deep-dives into product strategy, analytics, and execution.</p>
+                <p class="text-theme-textSec mb-8">Detailed deep-dives into product strategy, analytics, and execution are under preparation.</p>
                 
                 <div class="bg-theme-surface border border-theme-border border-dashed p-12 rounded-2xl flex flex-col items-center justify-center text-center opacity-70">
                     <i class="fa-solid fa-person-digging text-3xl text-theme-primary mb-4"></i>
@@ -736,7 +718,7 @@
                         <i class="fa-solid fa-envelope text-lg"></i> Send Email
                     </a>
                     <!-- LinkedIn Button -->
-                    <a href="https://www.linkedin.com/in/aanchalroutela" target="_blank" class="w-full sm:w-1/2 px-6 py-4 bg-theme-primary hover:bg-theme-primaryHover text-white font-bold rounded-xl transition-all shadow-xl shadow-theme-primary/15 flex items-center justify-center gap-3 text-sm">
+                    <a href="https://www.linkedin.com/in/aanchalroutela" target="_blank" class="w-full sm:w-1/2 px-6 py-4 bg-[#0A66C2] hover:bg-[#084e96] text-white font-bold rounded-xl transition-all shadow-xl shadow-[#0A66C2]/20 flex items-center justify-center gap-3 text-sm">
                         <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn Profile
                     </a>
                 </div>
@@ -843,50 +825,31 @@
 
     <!-- JavaScript -->
     <script>
-        // Sync heights of front and back faces dynamically
-        function adjustCardHeights() {
-            const cardIds = ['card-1', 'card-2', 'card-3', 'card-edu-1', 'card-cert-1', 'card-cert-2'];
-            
-            cardIds.forEach(id => {
-                const card = document.getElementById(id);
-                if (!card) return;
-                const front = card.children[0];
-                const back = card.children[1];
-                
-                // Temporarily reset to auto to calculate natural heights
-                front.style.height = 'auto';
-                back.style.height = 'auto';
-                
-                const maxHeight = Math.max(front.offsetHeight, back.offsetHeight);
-                
-                card.style.height = maxHeight + 'px';
-                front.style.height = maxHeight + 'px';
-                back.style.height = maxHeight + 'px';
-            });
-        }
-
-        window.addEventListener('load', adjustCardHeights);
-        window.addEventListener('resize', adjustCardHeights);
-
         // Flip Card Function
         function flipCard(cardId) {
             const card = document.getElementById(`card-${cardId}`);
-            card.classList.toggle('rotate-y-180');
+            if (card) {
+                card.classList.toggle('rotate-y-180');
+            }
         }
 
         // Modal Controls
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
         }
 
         function closeModal(modalId) {
             const modal = document.getElementById(modalId);
-            modal.classList.remove('flex');
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
+            if (modal) {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
         }
 
         // Close modal on background click
@@ -905,6 +868,7 @@
 
         function typeWriter(elementId, text, speed = 25, callback) {
             const element = document.getElementById(elementId);
+            if (!element) return;
             let i = 0;
             
             function type() {
