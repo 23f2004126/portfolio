@@ -162,72 +162,66 @@
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-6 flex items-center gap-3">
                     <span class="w-8 h-1 bg-theme-primary rounded-full"></span> About Me
                 </h2>
-                <div class="bg-theme-surface border border-theme-border p-8 rounded-2xl glow-effect shadow-sm mb-8">
+                <div class="bg-theme-surface border border-theme-border p-8 rounded-2xl glow-effect shadow-sm">
                     <p class="text-theme-textSec text-lg leading-relaxed">
                         <span id="about-typing-text"></span><span class="typing-cursor about-cursor">&nbsp;</span>
                     </p>
                 </div>
-
-                <!-- Styled Action Buttons for About Section -->
-                <div class="flex flex-wrap items-center justify-center gap-4">
-                    <a href="mailto:aanchalroutela01@gmail.com" class="px-5 py-3 rounded-xl bg-theme-surface hover:bg-theme-surfaceHover border border-theme-primary/40 text-theme-textMain hover:text-theme-primary text-sm font-semibold transition-all shadow-md flex items-center gap-2.5">
-                        <i class="fa-solid fa-envelope text-theme-primary text-base"></i>
-                        <span>Email Me</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/aanchalroutela" target="_blank" class="px-5 py-3 rounded-xl bg-[#0A66C2]/15 hover:bg-[#0A66C2]/25 border border-[#0A66C2]/50 text-theme-textMain hover:text-[#0A66C2] text-sm font-semibold transition-all shadow-md flex items-center gap-2.5">
-                        <i class="fa-brands fa-linkedin text-[#0A66C2] text-base"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/23f2004126" target="_blank" class="px-5 py-3 rounded-xl bg-theme-bg hover:bg-theme-surfaceHover border border-theme-border text-theme-textMain hover:text-theme-primary text-sm font-semibold transition-all shadow-md flex items-center gap-2.5">
-                        <i class="fa-brands fa-github text-base"></i>
-                        <span>GitHub</span>
-                    </a>
-                </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
+        <!-- Experience Section (Wide & Auto Flexible like Education Tab) -->
         <section id="experience" class="py-24 px-6 border-t border-theme-border">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-8 flex items-center gap-3">
                     <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Work Experience
                 </h2>
 
-                <div class="grid md:grid-cols-2 gap-6">
-                    <!-- Explified AI Product Manager Internship Card (Flippable & Flexible) -->
+                <div class="space-y-6">
+                    <!-- Explified AI Product Manager Internship Card (Wide & Flippable) -->
                     <div class="perspective-1000 w-full">
                         <div id="card-exp-1" class="relative w-full duration-700 transform-style-3d shadow-md rounded-xl">
                             <!-- Front -->
-                            <div class="bg-theme-surface border border-theme-border p-6 rounded-xl flex flex-col justify-between shadow-sm min-h-[160px] backface-hidden">
-                                <div class="flex items-start justify-between gap-4">
-                                    <div>
-                                        <div class="flex items-center gap-2">
-                                            <span class="px-2.5 py-0.5 bg-theme-accentBg text-theme-primary border border-theme-primary/30 text-[11px] font-bold rounded-md uppercase tracking-wider">Internship</span>
-                                            <span class="text-xs text-theme-textSec">Sept 2026 – Current</span>
-                                        </div>
-                                        <h3 class="text-lg font-bold text-theme-textMain mt-2">AI Product Manager</h3>
-                                        <p class="text-sm font-medium text-theme-primary">Explified</p>
+                            <div class="bg-theme-surface border border-theme-border p-6 sm:p-7 rounded-xl flex flex-col sm:flex-row items-start justify-between gap-6 shadow-sm backface-hidden">
+                                <div class="flex items-start gap-5 w-full">
+                                    <!-- Company Logo / Image Placeholder -->
+                                    <div class="w-14 h-14 rounded-xl bg-theme-bg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0 shadow-inner">
+                                        <i class="fa-solid fa-briefcase text-2xl"></i>
                                     </div>
-                                    <button onclick="flipCard('exp-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 shrink-0">
-                                        <i class="fa-solid fa-rotate"></i> Flip
-                                    </button>
+                                    
+                                    <div class="flex-grow">
+                                        <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                                            <span class="px-2.5 py-0.5 bg-theme-accentBg text-theme-primary border border-theme-primary/30 text-[11px] font-bold rounded-md uppercase tracking-wider">Internship</span>
+                                            <span class="text-xs text-theme-textSec font-medium">Sept 2026 – Current</span>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-theme-textMain">AI Product Manager</h3>
+                                        <p class="text-base font-semibold text-theme-primary mt-0.5">Explified</p>
+                                        <p class="text-xs text-theme-textSec/80 mt-2 leading-relaxed">
+                                            Driving AI product discovery, feature scoping, PRD documentation, and cross-functional alignment.
+                                        </p>
+                                    </div>
                                 </div>
-                                <p class="text-xs text-theme-textSec mt-4 pt-3 border-t border-theme-border/60">
-                                    Click flip to view responsibilities & key contributions.
-                                </p>
+
+                                <button onclick="flipCard('exp-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3.5 py-2 rounded-lg border border-theme-border transition-colors flex items-center gap-2 shrink-0 sm:self-start">
+                                    <i class="fa-solid fa-rotate text-theme-primary"></i> Flip Details
+                                </button>
                             </div>
+
                             <!-- Back -->
-                            <div class="absolute inset-0 bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm flex flex-col justify-between rotate-y-180 backface-hidden">
+                            <div class="absolute inset-0 bg-theme-surface border border-theme-border p-6 sm:p-7 rounded-xl shadow-sm flex flex-col justify-between rotate-y-180 backface-hidden overflow-y-auto">
                                 <div>
-                                    <div class="flex justify-between items-center mb-3">
-                                        <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">Key Responsibilities</span>
+                                    <div class="flex justify-between items-center mb-4">
+                                        <div class="flex items-center gap-2">
+                                            <i class="fa-solid fa-list-check text-theme-primary text-sm"></i>
+                                            <span class="text-xs font-bold text-theme-primary uppercase tracking-wider">Key Responsibilities & Contributions</span>
+                                        </div>
                                         <button onclick="flipCard('exp-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors">
                                             <i class="fa-solid fa-rotate"></i> Back
                                         </button>
                                     </div>
-                                    <ul class="text-xs text-theme-textSec space-y-2 list-disc pl-4 leading-relaxed">
-                                        <li>Driving product discovery, AI roadmap planning, and feature scoping for AI solutions.</li>
-                                        <li>Collaborating cross-functionally with engineering and design to define clear user stories and PRDs.</li>
+                                    <ul class="text-xs sm:text-sm text-theme-textSec space-y-2.5 list-disc pl-5 leading-relaxed">
+                                        <li>Leading AI product discovery, feature scoping, and AI roadmap planning.</li>
+                                        <li>Collaborating with engineering and design to author comprehensive PRDs and user acceptance criteria.</li>
                                         <li>[Details will be updated as internship progresses]</li>
                                     </ul>
                                 </div>
@@ -562,7 +556,7 @@
                                 <div>
                                     <div class="flex items-start justify-between mb-3">
                                         <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Relevant Courses</span>
-                                        <button onclick="flipCard('edu-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors">
+                                        <button onclick="flipCard('edu-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3.5 py-1.5 rounded-lg border border-theme-border transition-colors">
                                             <i class="fa-solid fa-rotate"></i> Back
                                         </button>
                                     </div>
@@ -596,7 +590,7 @@
             </div>
         </section>
 
-        <!-- Certifications Section -->
+        <!-- Certifications Section (With Skills Added to Back) -->
         <section id="certificates" class="py-24 px-6 border-t border-theme-border">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-2xl font-bold text-theme-textMain mb-8 flex items-center gap-3">
@@ -623,14 +617,21 @@
                                 </button>
                             </div>
                             <!-- Back -->
-                            <div class="absolute inset-0 bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm flex flex-col justify-between rotate-y-180 backface-hidden">
-                                <div class="flex justify-between items-start mb-2">
-                                    <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">Skills Acquired</span>
-                                    <button onclick="flipCard('cert-1')" class="text-xs text-theme-textSec hover:text-theme-textMain">
-                                        <i class="fa-solid fa-rotate"></i>
-                                    </button>
+                            <div class="absolute inset-0 bg-theme-surface border border-theme-border p-5 rounded-xl shadow-sm flex flex-col justify-between rotate-y-180 backface-hidden">
+                                <div class="space-y-2">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">Relevant Skills & Concepts</span>
+                                        <button onclick="flipCard('cert-1')" class="text-xs text-theme-textSec hover:text-theme-textMain">
+                                            <i class="fa-solid fa-rotate"></i>
+                                        </button>
+                                    </div>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span class="text-[11px] bg-theme-bg border border-theme-border/60 text-theme-textSec px-2 py-0.5 rounded">Complex Joins</span>
+                                        <span class="text-[11px] bg-theme-bg border border-theme-border/60 text-theme-textSec px-2 py-0.5 rounded">Aggregations</span>
+                                        <span class="text-[11px] bg-theme-bg border border-theme-border/60 text-theme-textSec px-2 py-0.5 rounded">Subqueries</span>
+                                        <span class="text-[11px] bg-theme-bg border border-theme-border/60 text-theme-textSec px-2 py-0.5 rounded">Data Analytics</span>
+                                    </div>
                                 </div>
-                                <p class="text-xs text-theme-textSec italic">Complex Joins, Aggregations, Subqueries, Indexing.</p>
                             </div>
                         </div>
                     </div>
@@ -654,14 +655,21 @@
                                 </button>
                             </div>
                             <!-- Back -->
-                            <div class="absolute inset-0 bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm flex flex-col justify-between rotate-y-180 backface-hidden">
-                                <div class="flex justify-between items-start mb-2">
-                                    <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">Skills Acquired</span>
-                                    <button onclick="flipCard('cert-2')" class="text-xs text-theme-textSec hover:text-theme-textMain">
-                                        <i class="fa-solid fa-rotate"></i>
-                                    </button>
+                            <div class="absolute inset-0 bg-theme-surface border border-theme-border p-5 rounded-xl shadow-sm flex flex-col justify-between rotate-y-180 backface-hidden">
+                                <div class="space-y-2">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">Relevant Skills & Concepts</span>
+                                        <button onclick="flipCard('cert-2')" class="text-xs text-theme-textSec hover:text-theme-textMain">
+                                            <i class="fa-solid fa-rotate"></i>
+                                        </button>
+                                    </div>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span class="text-[11px] bg-theme-bg border border-theme-border/60 text-theme-textSec px-2 py-0.5 rounded">Market Research</span>
+                                        <span class="text-[11px] bg-theme-bg border border-theme-border/60 text-theme-textSec px-2 py-0.5 rounded">PRD Drafting</span>
+                                        <span class="text-[11px] bg-theme-bg border border-theme-border/60 text-theme-textSec px-2 py-0.5 rounded">Feature Scoping</span>
+                                        <span class="text-[11px] bg-theme-bg border border-theme-border/60 text-theme-textSec px-2 py-0.5 rounded">User Testing</span>
+                                    </div>
                                 </div>
-                                <p class="text-xs text-theme-textSec italic">Market Research, Feature Scoping, PRD Drafting, User Testing.</p>
                             </div>
                         </div>
                     </div>
