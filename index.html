@@ -162,7 +162,7 @@
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-6 flex items-center gap-3">
                     <span class="w-8 h-1 bg-theme-primary rounded-full"></span> About Me
                 </h2>
-                <div class="bg-theme-surface border border-theme-border p-8 rounded-2xl glow-effect shadow-sm">
+                <div class="bg-theme-surface border border-theme-border p-8 rounded-2xl glow-effect glow-tile shadow-sm">
                     <p class="text-theme-textSec text-lg leading-relaxed">
                         <span id="about-typing-text"></span><span class="typing-cursor about-cursor">&nbsp;</span>
                     </p>
@@ -321,72 +321,89 @@
         </section>
 
         <!-- Skills Section -->
+        <style>
+            .skill-card {
+                position: relative; overflow: hidden;
+                background: #252525; border: 1px solid #333333; border-radius: 1.25rem; padding: 1.5rem;
+            }
+            .skill-card::before {
+                content: ""; position: absolute; top: 0; left: 1.5rem; right: 1.5rem; height: 2px;
+                background: linear-gradient(90deg, #FF6A2A, transparent); opacity: .55; border-radius: 0 0 4px 4px;
+            }
+            .skill-card-ai { background: linear-gradient(135deg, #2A211C 0%, #252525 60%); border-color: rgba(255,106,42,.35); }
+            .skill-chip {
+                display: inline-flex; align-items: center; gap: .45rem;
+                padding: .4rem .8rem; border-radius: 9999px;
+                background: #121212; border: 1px solid rgba(51,51,51,.9);
+                color: #CFC8BB; font-size: .78rem; font-weight: 500; line-height: 1.2;
+                transition: all .2s ease; cursor: default;
+            }
+            .skill-chip:hover { border-color: #FF6A2A; color: #F4EDE1; background: #251E1A; transform: translateY(-1px); }
+
+            /* Shared tile glow (hover) */
+            .glow-tile, .perspective-1000 > div > .backface-hidden {
+                transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+            }
+            .glow-tile:hover {
+                transform: translateY(-3px); border-color: rgba(255,106,42,.45);
+                box-shadow: 0 18px 40px -18px rgba(255,106,42,.35), 0 0 0 1px rgba(255,106,42,.12);
+            }
+            /* Flip cards: glow without lift, so the 3D rotation is never overridden */
+            .perspective-1000:hover > div > .backface-hidden {
+                border-color: rgba(255,106,42,.45);
+                box-shadow: 0 18px 40px -18px rgba(255,106,42,.35), 0 0 0 1px rgba(255,106,42,.12);
+            }
+        </style>
         <section id="skills" class="py-24 px-6 border-t border-theme-border bg-theme-surface/30">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-10 flex items-center gap-3">
-                    <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Skills & Expertise
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-3 flex items-center gap-3">
+                    <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Skills &amp; Expertise
                 </h2>
-                
-                <div class="space-y-8">
-                    <!-- Skills -->
-                    <div class="bg-theme-surface border border-theme-border p-8 rounded-2xl shadow-sm">
-                        <h3 class="text-lg font-semibold text-theme-textMain mb-4 flex items-center gap-2">
-                            <i class="fa-solid fa-compass-drafting text-theme-primary"></i> Skills
-                        </h3>
-                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-theme-textSec">
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Product Discovery</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> User Research</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Problem Definition</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> User Stories & Acceptance Criteria</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Product Requirements & PRDs</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Feature Prioritisation</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Product Documentation</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Product Roadmapping</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Agile / Scrum</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Cross-Functional Collaboration</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> AI Product</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> AI Product Thinking</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Generative AI</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> LLM Applications</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Prompt Engineering</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> RAG</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> AI Agents</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> AI Evaluation</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-check text-theme-primary text-xs"></i> Data-Driven Product Analysis</div>
-                        </div>
-                    </div>
+                <div class="flex flex-wrap items-center gap-3 mb-10">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-theme-primary text-white text-sm font-bold shadow-lg shadow-theme-primary/20"><i class="fa-solid fa-layer-group text-xs"></i> Product Management</span>
+                    <span class="text-sm text-theme-textSec">Core discipline, backed by data, AI and hands-on tooling.</span>
+                </div>
 
-                    <!-- Tools -->
-                    <div class="bg-theme-surface border border-theme-border p-8 rounded-2xl shadow-sm">
-                        <h3 class="text-lg font-semibold text-theme-textMain mb-4 flex items-center gap-2">
-                            <i class="fa-solid fa-toolbox text-theme-primary"></i> Tools
-                        </h3>
-                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-theme-textSec">
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-brands fa-jira text-theme-primary text-xs"></i> JIRA</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-chart-bar text-theme-primary text-xs"></i> POWER BI</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-file-excel text-theme-primary text-xs"></i> EXCEL</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-brands fa-github text-theme-primary text-xs"></i> GITHUB</div>
+                <div class="grid md:grid-cols-2 auto-rows-fr gap-6">
+                    <div class="skill-card glow-tile">
+                        <div class="flex items-center gap-3.5 mb-5">
+                            <div class="w-11 h-11 rounded-xl bg-theme-accentBg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0"><i class="fa-solid fa-compass"></i></div>
+                            <div>
+                                <h3 class="text-base font-bold text-theme-textMain leading-tight">Discovery & Strategy</h3>
+                                <p class="text-xs text-theme-textSec mt-0.5">Understanding users and deciding what to build</p>
+                            </div>
                         </div>
+                        <div class="flex flex-wrap gap-2"><span class="skill-chip">Product Discovery</span><span class="skill-chip">Problem Definition & Validation</span><span class="skill-chip">User Research & Customer Interviews</span><span class="skill-chip">Customer Segmentation & Personas</span><span class="skill-chip">Competitive Analysis</span><span class="skill-chip">Product Strategy</span><span class="skill-chip">Product Vision & Objectives</span><span class="skill-chip">Product Positioning & Value Proposition</span><span class="skill-chip">Go-to-Market (GTM)</span></div>
                     </div>
-
-                    <!-- Tech Skills -->
-                    <div class="bg-theme-surface border border-theme-border p-8 rounded-2xl shadow-sm">
-                        <h3 class="text-lg font-semibold text-theme-textMain mb-4 flex items-center gap-2">
-                            <i class="fa-solid fa-code text-theme-primary"></i> Tech Skills
-                        </h3>
-                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-theme-textSec">
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-terminal text-theme-primary text-xs"></i> PYTHON</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-database text-theme-primary text-xs"></i> SQL</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-table text-theme-primary text-xs"></i> PANDAS</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-square-root-variable text-theme-primary text-xs"></i> NUMPY</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-brain text-theme-primary text-xs"></i> SCIKIT-LEARN</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-network-wired text-theme-primary text-xs"></i> TENSORFLOW</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-bolt text-theme-primary text-xs"></i> FASTAPI</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-flask text-theme-primary text-xs"></i> FLASK</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-link text-theme-primary text-xs"></i> LANGCHAIN</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-solid fa-magnifying-glass text-theme-primary text-xs"></i> FAISS</div>
-                            <div class="flex items-center gap-2.5 bg-theme-bg p-3 rounded-xl border border-theme-border/60"><i class="fa-brands fa-git-alt text-theme-primary text-xs"></i> GIT</div>
+                    <div class="skill-card glow-tile">
+                        <div class="flex items-center gap-3.5 mb-5">
+                            <div class="w-11 h-11 rounded-xl bg-theme-accentBg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0"><i class="fa-solid fa-diagram-project"></i></div>
+                            <div>
+                                <h3 class="text-base font-bold text-theme-textMain leading-tight">Delivery & Analytics</h3>
+                                <p class="text-xs text-theme-textSec mt-0.5">Shipping product and measuring what works</p>
+                            </div>
                         </div>
+                        <div class="flex flex-wrap gap-2"><span class="skill-chip">Product Requirements & PRDs</span><span class="skill-chip">User Stories & Acceptance Criteria</span><span class="skill-chip">Feature Prioritization</span><span class="skill-chip">Product Roadmapping</span><span class="skill-chip">Product Documentation</span><span class="skill-chip">Agile / Scrum</span><span class="skill-chip">Cross-Functional Collaboration</span><span class="skill-chip">Stakeholder Management</span><span class="skill-chip">Data-Driven Product Analysis</span><span class="skill-chip">Product Metrics & Analytics</span><span class="skill-chip">A/B Testing & Experimentation</span><span class="skill-chip">MVP Experimentation</span></div>
+                    </div>
+                    <div class="skill-card glow-tile skill-card-ai">
+                        <div class="flex items-center gap-3.5 mb-5">
+                            <div class="w-11 h-11 rounded-xl bg-theme-accentBg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <div>
+                                <h3 class="text-base font-bold text-theme-textMain leading-tight">AI Product</h3>
+                                <p class="text-xs text-theme-textSec mt-0.5">Building and evaluating GenAI-powered products</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2"><span class="skill-chip">AI Product</span><span class="skill-chip">AI Product Management</span><span class="skill-chip">AI Product Thinking</span><span class="skill-chip">Generative AI</span><span class="skill-chip">LLM Applications</span><span class="skill-chip">Prompt Engineering</span><span class="skill-chip">RAG</span><span class="skill-chip">AI Agents</span><span class="skill-chip">AI Evaluation</span></div>
+                    </div>
+                    <div class="skill-card glow-tile">
+                        <div class="flex items-center gap-3.5 mb-5">
+                            <div class="w-11 h-11 rounded-xl bg-theme-accentBg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0"><i class="fa-solid fa-toolbox"></i></div>
+                            <div>
+                                <h3 class="text-base font-bold text-theme-textMain leading-tight">Tools & Tech</h3>
+                                <p class="text-xs text-theme-textSec mt-0.5">What I work in day to day</p>
+                            </div>
+                        </div>
+                        <p class="text-[11px] font-bold text-theme-primary uppercase tracking-wider mb-2.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Tools</p><div class="flex flex-wrap gap-2"><span class="skill-chip"><i class="fa-brands fa-jira text-theme-primary text-[11px]"></i>Jira</span><span class="skill-chip"><i class="fa-solid fa-file-excel text-theme-primary text-[11px]"></i>Excel / Zoho Sheets</span><span class="skill-chip"><i class="fa-brands fa-figma text-theme-primary text-[11px]"></i>Figma</span><span class="skill-chip"><i class="fa-brands fa-github text-theme-primary text-[11px]"></i>GitHub</span></div><div class="h-5"></div><p class="text-[11px] font-bold text-theme-primary uppercase tracking-wider mb-2.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Technical Skills</p><div class="flex flex-wrap gap-2"><span class="skill-chip"><i class="fa-brands fa-python text-theme-primary text-[11px]"></i>Python</span><span class="skill-chip"><i class="fa-solid fa-database text-theme-primary text-[11px]"></i>SQL</span><span class="skill-chip"><i class="fa-solid fa-table text-theme-primary text-[11px]"></i>Pandas</span><span class="skill-chip"><i class="fa-solid fa-square-root-variable text-theme-primary text-[11px]"></i>NumPy</span><span class="skill-chip"><i class="fa-solid fa-brain text-theme-primary text-[11px]"></i>Scikit-learn</span><span class="skill-chip"><i class="fa-solid fa-network-wired text-theme-primary text-[11px]"></i>TensorFlow</span><span class="skill-chip"><i class="fa-solid fa-bolt text-theme-primary text-[11px]"></i>FastAPI</span><span class="skill-chip"><i class="fa-solid fa-flask text-theme-primary text-[11px]"></i>Flask</span><span class="skill-chip"><i class="fa-solid fa-link text-theme-primary text-[11px]"></i>LangChain</span><span class="skill-chip"><i class="fa-solid fa-magnifying-glass text-theme-primary text-[11px]"></i>FAISS</span><span class="skill-chip"><i class="fa-brands fa-git-alt text-theme-primary text-[11px]"></i>Git</span></div>
                     </div>
                 </div>
             </div>
@@ -666,7 +683,7 @@
                     </div>
 
                     <!-- Panchsheel Public School -->
-                    <div class="bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm">
+                    <div class="glow-tile bg-theme-surface border border-theme-border p-6 rounded-xl shadow-sm">
                         <span class="text-xs font-bold text-theme-primary uppercase tracking-wider">2020–2023</span>
                         <h3 class="text-lg font-bold text-theme-textMain mt-1">Panchsheel Public School</h3>
                         <p class="text-sm text-theme-textSec">Intermediate & Matriculation (CBSE)</p>
@@ -883,7 +900,7 @@
         <!-- Resume Download Section -->
         <section id="resume" class="py-16 px-6 border-t border-theme-border">
             <div class="max-w-3xl mx-auto text-center flex flex-col items-center">
-                <div class="bg-theme-surface border border-theme-border rounded-2xl p-8 sm:p-10 w-full flex flex-col items-center shadow-lg relative overflow-hidden">
+                <div class="glow-tile bg-theme-surface border border-theme-border rounded-2xl p-8 sm:p-10 w-full flex flex-col items-center shadow-lg relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-theme-primary/5 rounded-bl-full pointer-events-none"></div>
                     <div class="w-16 h-16 bg-theme-accentBg border border-theme-primary/20 rounded-full flex items-center justify-center text-theme-primary text-2xl mb-5">
                         <i class="fa-solid fa-file-pdf"></i>
