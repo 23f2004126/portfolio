@@ -106,7 +106,6 @@
                 <a href="#experience" class="hover:text-theme-primary transition-colors">Experience</a>
                 <a href="#skills" class="hover:text-theme-primary transition-colors">Skills</a>
                 <a href="#projects" class="hover:text-theme-primary transition-colors">Projects</a>
-                <a href="#prototypes" class="hover:text-theme-primary transition-colors">Prototypes</a>
                 <a href="#education" class="hover:text-theme-primary transition-colors">Education</a>
                 <a href="#certificates" class="hover:text-theme-primary transition-colors">Certificates</a>
                 <a href="#case-studies" class="hover:text-theme-primary transition-colors">Case Studies</a>
@@ -196,35 +195,130 @@
                                         </div>
                                         <h3 class="text-xl font-bold text-theme-textMain">AI Product Manager</h3>
                                         <p class="text-base font-semibold text-theme-primary mt-0.5">Explified</p>
-                                        <p class="text-xs text-theme-textSec/80 mt-2 leading-relaxed">
-                                            Driving AI product discovery, feature scoping, PRD documentation, and cross-functional alignment.
-                                        </p>
+                                        <div class="mt-4 pt-4 border-t border-theme-border/70">
+                                            <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider flex items-center gap-1.5 mb-2.5"><i class="fa-solid fa-list-check text-theme-primary text-sm"></i> Key Responsibilities &amp; Contributions</span>
+                                            <ul class="text-xs sm:text-sm text-theme-textSec space-y-2 list-disc pl-5 leading-relaxed">
+                                                <li>Drove end-to-end product discovery for multiple Figma plugin concepts, from research and ideation to feature definition and validation.</li>
+                                                <li>Conducted competitor research and market analysis, identifying product gaps and opportunities for differentiation.</li>
+                                                <li>Created PRDs, user flows, prototypes, and low/high-fidelity wireframes to translate product concepts into tangible product experiences.</li>
+                                                <li>Collaborated with design and technical teams to assess feasibility, refine requirements, and iterate on product concepts based on feedback.</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <button onclick="flipCard('exp-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3.5 py-2 rounded-lg border border-theme-border transition-colors flex items-center gap-2 shrink-0 sm:self-start">
-                                    <i class="fa-solid fa-rotate text-theme-primary"></i> Flip Details
+                                    <i class="fa-solid fa-rotate text-theme-primary"></i> View My Work
                                 </button>
                             </div>
 
                             <!-- Back -->
-                            <div class="absolute inset-0 bg-theme-surface border border-theme-border p-6 sm:p-7 rounded-xl shadow-sm flex flex-col justify-between rotate-y-180 backface-hidden overflow-y-auto">
-                                <div>
-                                    <div class="flex justify-between items-center mb-4">
-                                        <div class="flex items-center gap-2">
-                                            <i class="fa-solid fa-list-check text-theme-primary text-sm"></i>
-                                            <span class="text-xs font-bold text-theme-primary uppercase tracking-wider">Key Responsibilities & Contributions</span>
-                                        </div>
-                                        <button onclick="flipCard('exp-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors">
-                                            <i class="fa-solid fa-rotate"></i> Back
-                                        </button>
+                            <div class="absolute inset-0 bg-theme-surface border border-theme-border p-6 sm:p-7 rounded-xl shadow-sm rotate-y-180 backface-hidden">
+                                <div class="flex justify-between items-center mb-5">
+                                    <div class="flex items-center gap-2">
+                                        <i class="fa-solid fa-layer-group text-theme-primary text-sm"></i>
+                                        <span class="text-xs font-bold text-theme-primary uppercase tracking-wider">Work at Explified · Figma Plugin Prototypes</span>
                                     </div>
-                                    <ul class="text-xs sm:text-sm text-theme-textSec space-y-2.5 list-disc pl-5 leading-relaxed">
-                                        <li>Leading AI product discovery, feature scoping, and AI roadmap planning.</li>
-                                        <li>Collaborating with engineering and design to author comprehensive PRDs and user acceptance criteria.</li>
-                                        <li>[Details will be updated as internship progresses]</li>
-                                    </ul>
+                                    <button onclick="flipCard('exp-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors">
+                                        <i class="fa-solid fa-rotate"></i> Back
+                                    </button>
                                 </div>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        <div class="perspective-1000 w-full">
+                                            <div id="card-work-stocker" class="relative w-full h-[390px] duration-700 transform-style-3d rounded-xl">
+                                                <!-- Front -->
+                                                <div class="absolute inset-0 bg-theme-bg border border-theme-border rounded-xl p-4 flex flex-col backface-hidden">
+                                                    <div class="flex items-center justify-between mb-3">
+                                                        <span class="px-2 py-0.5 bg-theme-accentBg text-theme-primary border border-theme-primary/30 text-[10px] font-bold rounded-md uppercase tracking-wider">Figma Plugin · Image Discovery</span>
+                                                        <button onclick="flipCard('work-stocker')" class="text-[11px] font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-surface px-2.5 py-1 rounded-md border border-theme-border transition-colors"><i class="fa-solid fa-rotate text-theme-primary"></i> Flip</button>
+                                                    </div>
+                                                    <div class="w-full aspect-square max-h-[170px] bg-theme-surface border border-theme-border/70 rounded-xl overflow-hidden flex items-center justify-center mb-3">
+                                                        <img src="prototype/1.jpg" onerror="this.onerror=null;this.src='experience/stocker.jpg'" alt="Stocker logo" class="w-full h-full object-cover">
+                                                    </div>
+                                                    <h4 class="text-base font-bold text-theme-textMain">Stocker</h4>
+                                                    <p class="text-xs text-theme-textSec mt-1 leading-relaxed">Search images and prep them for any platform without leaving Figma.</p>
+                                                    <div class="mt-auto pt-3">
+                                                        <a id="proto-stocker" href="#" target="_blank" rel="noopener" class="proto-btn py-2.5 bg-theme-primary hover:bg-theme-primaryHover text-white text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1.5"><i class="fa-solid fa-play"></i> Prototype</a>
+                                                    </div>
+                                                </div>
+                                                <!-- Back -->
+                                                <div class="absolute inset-0 bg-theme-bg border border-theme-border rounded-xl p-4 flex flex-col rotate-y-180 backface-hidden">
+                                                    <div class="flex items-center justify-between mb-2">
+                                                        <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">Stocker · V1</span>
+                                                        <button onclick="flipCard('work-stocker')" class="text-[11px] font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-surface px-2.5 py-1 rounded-md border border-theme-border transition-colors"><i class="fa-solid fa-rotate"></i> Back</button>
+                                                    </div>
+                                                    <div class="flex-grow overflow-y-auto pr-1 space-y-2.5 text-xs text-theme-textSec leading-relaxed">
+                                                        <div><span class="font-semibold text-theme-textMain">Problem:</span> Designers search for an image, then manually crop it for every platform, switching tools and adding steps to the workflow.</div>
+                                                        <div><span class="font-semibold text-theme-textMain">Solution:</span> A Figma plugin combining image search, discovery filters, free crop and Smart Ratio presets in one flow.</div>
+                                                        <div><span class="font-semibold text-theme-textMain">Key features</span><ul class="list-disc pl-4 mt-1 space-y-0.5"><li>Image Search</li><li>Brand Colour Filter</li><li>Ratio Filter</li><li>Free Crop</li><li>Smart Ratio presets (Instagram, LinkedIn, X)</li></ul></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="perspective-1000 w-full">
+                                            <div id="card-work-linguavault" class="relative w-full h-[390px] duration-700 transform-style-3d rounded-xl">
+                                                <!-- Front -->
+                                                <div class="absolute inset-0 bg-theme-bg border border-theme-border rounded-xl p-4 flex flex-col backface-hidden">
+                                                    <div class="flex items-center justify-between mb-3">
+                                                        <span class="px-2 py-0.5 bg-theme-accentBg text-theme-primary border border-theme-primary/30 text-[10px] font-bold rounded-md uppercase tracking-wider">Figma Plugin · Localization</span>
+                                                        <button onclick="flipCard('work-linguavault')" class="text-[11px] font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-surface px-2.5 py-1 rounded-md border border-theme-border transition-colors"><i class="fa-solid fa-rotate text-theme-primary"></i> Flip</button>
+                                                    </div>
+                                                    <div class="w-full aspect-square max-h-[170px] bg-theme-surface border border-theme-border/70 rounded-xl overflow-hidden flex items-center justify-center mb-3">
+                                                        <img src="prototype/2.jpg" onerror="this.onerror=null;this.src='experience/linguavault.jpg'" alt="LinguaVault logo" class="w-full h-full object-cover">
+                                                    </div>
+                                                    <h4 class="text-base font-bold text-theme-textMain">LinguaVault</h4>
+                                                    <p class="text-xs text-theme-textSec mt-1 leading-relaxed">Translate your designs, not just your words.</p>
+                                                    <div class="mt-auto pt-3">
+                                                        <a id="proto-linguavault" href="#" target="_blank" rel="noopener" class="proto-btn py-2.5 bg-theme-primary hover:bg-theme-primaryHover text-white text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1.5"><i class="fa-solid fa-play"></i> Prototype</a>
+                                                    </div>
+                                                </div>
+                                                <!-- Back -->
+                                                <div class="absolute inset-0 bg-theme-bg border border-theme-border rounded-xl p-4 flex flex-col rotate-y-180 backface-hidden">
+                                                    <div class="flex items-center justify-between mb-2">
+                                                        <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">LinguaVault · V1</span>
+                                                        <button onclick="flipCard('work-linguavault')" class="text-[11px] font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-surface px-2.5 py-1 rounded-md border border-theme-border transition-colors"><i class="fa-solid fa-rotate"></i> Back</button>
+                                                    </div>
+                                                    <div class="flex-grow overflow-y-auto pr-1 space-y-2.5 text-xs text-theme-textSec leading-relaxed">
+                                                        <div><span class="font-semibold text-theme-textMain">Problem:</span> Designers building multilingual products recreate or manually edit the same design for every language.</div>
+                                                        <div><span class="font-semibold text-theme-textMain">Solution:</span> A Figma plugin that converts a selected frame into one or many languages while keeping the original intact.</div>
+                                                        <div><span class="font-semibold text-theme-textMain">Key features</span><ul class="list-disc pl-4 mt-1 space-y-0.5"><li>Multi-language selection</li><li>Auto-resize text to fit</li><li>Original vs translated preview</li><li>Text-length warnings</li><li>Language-specific frames + report</li></ul></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="perspective-1000 w-full">
+                                            <div id="card-work-eyeorder" class="relative w-full h-[390px] duration-700 transform-style-3d rounded-xl">
+                                                <!-- Front -->
+                                                <div class="absolute inset-0 bg-theme-bg border border-theme-border rounded-xl p-4 flex flex-col backface-hidden">
+                                                    <div class="flex items-center justify-between mb-3">
+                                                        <span class="px-2 py-0.5 bg-theme-accentBg text-theme-primary border border-theme-primary/30 text-[10px] font-bold rounded-md uppercase tracking-wider">Figma Plugin · Visual Hierarchy</span>
+                                                        <button onclick="flipCard('work-eyeorder')" class="text-[11px] font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-surface px-2.5 py-1 rounded-md border border-theme-border transition-colors"><i class="fa-solid fa-rotate text-theme-primary"></i> Flip</button>
+                                                    </div>
+                                                    <div class="w-full aspect-square max-h-[170px] bg-theme-surface border border-theme-border/70 rounded-xl overflow-hidden flex items-center justify-center mb-3">
+                                                        <img src="prototype/3.jpg" onerror="this.onerror=null;this.src='experience/eyeorder.jpg'" alt="EyeOrder logo" class="w-full h-full object-cover">
+                                                    </div>
+                                                    <h4 class="text-base font-bold text-theme-textMain">EyeOrder</h4>
+                                                    <p class="text-xs text-theme-textSec mt-1 leading-relaxed">See what gets noticed first.</p>
+                                                    <div class="mt-auto pt-3">
+                                                        <a id="proto-eyeorder" href="#" target="_blank" rel="noopener" class="proto-btn py-2.5 bg-theme-primary hover:bg-theme-primaryHover text-white text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1.5"><i class="fa-solid fa-play"></i> Prototype</a>
+                                                    </div>
+                                                </div>
+                                                <!-- Back -->
+                                                <div class="absolute inset-0 bg-theme-bg border border-theme-border rounded-xl p-4 flex flex-col rotate-y-180 backface-hidden">
+                                                    <div class="flex items-center justify-between mb-2">
+                                                        <span class="text-[11px] font-bold text-theme-primary uppercase tracking-wider">EyeOrder · V1</span>
+                                                        <button onclick="flipCard('work-eyeorder')" class="text-[11px] font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-surface px-2.5 py-1 rounded-md border border-theme-border transition-colors"><i class="fa-solid fa-rotate"></i> Back</button>
+                                                    </div>
+                                                    <div class="flex-grow overflow-y-auto pr-1 space-y-2.5 text-xs text-theme-textSec leading-relaxed">
+                                                        <div><span class="font-semibold text-theme-textMain">Problem:</span> Designers judge attention by instinct or screenshot tools that never show how the intended CTA ranks.</div>
+                                                        <div><span class="font-semibold text-theme-textMain">Solution:</span> A plugin that reads frame layers, predicts an attention heatmap and ranks the CTA against other elements.</div>
+                                                        <div><span class="font-semibold text-theme-textMain">Key features</span><ul class="list-disc pl-4 mt-1 space-y-0.5"><li>Predicted attention heatmap</li><li>Heatmap toggle & style</li><li>CTA selection</li><li>Attention rank graph</li><li>Add heatmap to canvas</li></ul></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -516,209 +610,6 @@
             </div>
         </section>
 
-        <!-- Prototypes Section -->
-        <section id="prototypes" class="py-24 px-6 border-t border-theme-border bg-theme-surface/30">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-2xl sm:text-3xl font-bold text-theme-textMain mb-4 flex items-center gap-3">
-                    <span class="w-8 h-1 bg-theme-primary rounded-full"></span> Figma Prototypes
-                </h2>
-                <p class="text-theme-textSec mb-12">Explored, designed, and deployed specifically for <strong>Explified</strong>. Click <strong>"Flip Card"</strong> to examine problem statements.</p>
-
-                <div class="grid lg:grid-cols-3 gap-8 items-start">
-                    
-                    <!-- Prototype 1: Stocker -->
-                    <div class="perspective-1000 w-full">
-                        <div id="card-proto-1" class="relative w-full duration-700 transform-style-3d shadow-md rounded-2xl">
-                            <!-- Front -->
-                            <div class="bg-theme-surface border border-theme-border rounded-2xl p-6 flex flex-col justify-between shadow-sm backface-hidden">
-                                <div class="space-y-4">
-                                    <div class="flex items-center justify-between">
-                                        <span class="px-2.5 py-0.5 bg-theme-accentBg text-theme-primary text-[11px] font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Explified</span>
-                                        <button onclick="flipCard('proto-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
-                                            <i class="fa-solid fa-rotate"></i> Flip Card
-                                        </button>
-                                    </div>
-                                    
-                                    <!-- Auto-fit Flexible Container for Logo / Image -->
-                                    <div class="w-full aspect-video bg-theme-bg border border-theme-border/70 rounded-xl relative flex items-center justify-center p-2 overflow-hidden shadow-inner">
-                                        <img src="prototype/1.jpg" alt="Stocker Prototype Logo" class="max-w-full max-h-full object-contain" />
-                                    </div>
-
-                                    <div class="space-y-2">
-                                        <h3 class="text-base font-bold text-theme-textMain">Stocker</h3>
-                                        <p class="text-xs text-theme-primary font-semibold">Built at Explified</p>
-                                        <p class="text-theme-textSec text-xs leading-relaxed">
-                                            Makes image discovery and preparation faster and easier for designers directly inside Figma without switching tools.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="space-y-3 pt-4">
-                                    <div class="grid grid-cols-2 gap-2">
-                                        <a href="https://www.figma.com/board/YXvtPTc5yThIdfgwaJYwKH/Stocker?node-id=0-1&p=f" target="_blank" class="py-2.5 bg-theme-bg hover:bg-theme-bg/80 text-theme-textMain text-xs font-bold rounded-xl border border-theme-border transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm">
-                                            <i class="fa-brands fa-figma text-theme-primary"></i> Wireframe Link
-                                        </a>
-                                        <a href="https://stocker-plugin.netlify.app/" target="_blank" class="py-2.5 bg-theme-primary hover:bg-theme-primaryHover text-white text-xs font-bold rounded-xl transition-all shadow-lg shadow-theme-primary/15 flex items-center justify-center gap-1.5 cursor-pointer">
-                                            <i class="fa-solid fa-rocket"></i> Prototype Link
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Back -->
-                            <div class="absolute inset-0 bg-theme-surface border border-theme-border rounded-2xl p-6 flex flex-col justify-between shadow-sm rotate-y-180 backface-hidden">
-                                <div class="space-y-3">
-                                    <div class="flex items-center justify-between">
-                                        <span class="px-2.5 py-0.5 bg-theme-accentBg text-theme-primary text-[11px] font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Problem Statement</span>
-                                        <button onclick="flipCard('proto-1')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
-                                            <i class="fa-solid fa-rotate"></i> Back
-                                        </button>
-                                    </div>
-                                    <h3 class="text-sm font-bold text-theme-textMain">Image Workflow Friction</h3>
-                                    <p class="text-xs text-theme-textSec leading-relaxed">
-                                        Designers often need to search for an image and then manually crop or adapt it to specific dimensions for different platforms. Switching between tools and manually preparing images adds unnecessary steps to the design workflow.
-                                    </p>
-                                </div>
-                                <div class="grid grid-cols-2 gap-2 pt-4">
-                                    <a href="https://www.figma.com/board/YXvtPTc5yThIdfgwaJYwKH/Stocker?node-id=0-1&p=f" target="_blank" class="py-2.5 bg-theme-bg hover:bg-theme-bg/80 text-theme-textMain text-xs font-bold rounded-xl border border-theme-border transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm">
-                                        <i class="fa-brands fa-figma text-theme-primary"></i> Wireframes
-                                    </a>
-                                    <a href="https://stocker-plugin.netlify.app/" target="_blank" class="py-2.5 bg-theme-primary hover:bg-theme-primaryHover text-white text-xs font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-1.5 cursor-pointer">
-                                        <i class="fa-solid fa-rocket"></i> Prototype
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Prototype 2: LinguaVault -->
-                    <div class="perspective-1000 w-full">
-                        <div id="card-proto-2" class="relative w-full duration-700 transform-style-3d shadow-md rounded-2xl">
-                            <!-- Front -->
-                            <div class="bg-theme-surface border border-theme-border rounded-2xl p-6 flex flex-col justify-between shadow-sm backface-hidden">
-                                <div class="space-y-4">
-                                    <div class="flex items-center justify-between">
-                                        <span class="px-2.5 py-0.5 bg-theme-accentBg text-theme-primary text-[11px] font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Explified</span>
-                                        <button onclick="flipCard('proto-2')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
-                                            <i class="fa-solid fa-rotate"></i> Flip Card
-                                        </button>
-                                    </div>
-                                    
-                                    <!-- Auto-fit Flexible Container for Logo / Image -->
-                                    <div class="w-full aspect-video bg-theme-bg border border-theme-border/70 rounded-xl relative flex items-center justify-center p-2 overflow-hidden shadow-inner">
-                                        <img src="prototype/2.jpg" alt="LinguaVault Prototype Logo" class="max-w-full max-h-full object-contain" />
-                                    </div>
-
-                                    <div class="space-y-2">
-                                        <h3 class="text-base font-bold text-theme-textMain">LinguaVault</h3>
-                                        <p class="text-xs text-theme-primary font-semibold">Translate your designs, not just your words</p>
-                                        <p class="text-theme-textSec text-xs leading-relaxed">
-                                            Accelerates multilingual design creation by translating Figma wireframes into multiple languages while preserving layout structures.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="space-y-3 pt-4">
-                                    <div class="grid grid-cols-2 gap-2">
-                                        <a href="https://www.figma.com/design/AguSMOFqfxbRe0G8klwnEy/LinguaVault?node-id=26-2&p=f" target="_blank" class="py-2.5 bg-theme-bg hover:bg-theme-bg/80 text-theme-textMain text-xs font-bold rounded-xl border border-theme-border transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm">
-                                            <i class="fa-brands fa-figma text-theme-primary"></i> Wireframe Link
-                                        </a>
-                                        <a href="#" target="_blank" class="py-2.5 bg-theme-primary hover:bg-theme-primaryHover text-white text-xs font-bold rounded-xl transition-all shadow-lg shadow-theme-primary/15 flex items-center justify-center gap-1.5 cursor-pointer">
-                                            <i class="fa-solid fa-rocket"></i> Prototype Link
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Back -->
-                            <div class="absolute inset-0 bg-theme-surface border border-theme-border rounded-2xl p-6 flex flex-col justify-between shadow-sm rotate-y-180 backface-hidden">
-                                <div class="space-y-3">
-                                    <div class="flex items-center justify-between">
-                                        <span class="px-2.5 py-0.5 bg-theme-accentBg text-theme-primary text-[11px] font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Problem Statement</span>
-                                        <button onclick="flipCard('proto-2')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
-                                            <i class="fa-solid fa-rotate"></i> Back
-                                        </button>
-                                    </div>
-                                    <h3 class="text-sm font-bold text-theme-textMain">Multilingual Overhead</h3>
-                                    <p class="text-xs text-theme-textSec leading-relaxed">
-                                        Designers creating products for multiple languages need to recreate or manually modify designs for every language. Translating text, replacing content, creating duplicate frames, and adjusting layout lengths make the workflow repetitive and time-consuming.
-                                    </p>
-                                </div>
-                                <div class="grid grid-cols-2 gap-2 pt-4">
-                                    <a href="https://www.figma.com/design/AguSMOFqfxbRe0G8klwnEy/LinguaVault?node-id=26-2&p=f" target="_blank" class="py-2.5 bg-theme-bg hover:bg-theme-bg/80 text-theme-textMain text-xs font-bold rounded-xl border border-theme-border transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm">
-                                        <i class="fa-brands fa-figma text-theme-primary"></i> Wireframes
-                                    </a>
-                                    <a href="#" target="_blank" class="py-2.5 bg-theme-primary hover:bg-theme-primaryHover text-white text-xs font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-1.5 cursor-pointer">
-                                        <i class="fa-solid fa-rocket"></i> Prototype
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Prototype 3: EyeOrder -->
-                    <div class="perspective-1000 w-full">
-                        <div id="card-proto-3" class="relative w-full duration-700 transform-style-3d shadow-md rounded-2xl">
-                            <!-- Front -->
-                            <div class="bg-theme-surface border border-theme-border rounded-2xl p-6 flex flex-col justify-between shadow-sm backface-hidden">
-                                <div class="space-y-4">
-                                    <div class="flex items-center justify-between">
-                                        <span class="px-2.5 py-0.5 bg-theme-accentBg text-theme-primary text-[11px] font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Explified</span>
-                                        <button onclick="flipCard('proto-3')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
-                                            <i class="fa-solid fa-rotate"></i> Flip Card
-                                        </button>
-                                    </div>
-                                    
-                                    <!-- Auto-fixable Container for Logo/Image (Scales properly regardless of aspect ratio) -->
-                                    <div class="w-full aspect-video bg-theme-bg border border-theme-border/70 rounded-xl relative flex items-center justify-center p-2 overflow-hidden shadow-inner">
-                                        <img src="prototype/3.jpg" alt="EyeOrder Prototype Logo" class="max-w-full max-h-full object-contain" />
-                                    </div>
-
-                                    <div class="space-y-2">
-                                        <h3 class="text-base font-bold text-theme-textMain">EyeOrder</h3>
-                                        <p class="text-xs text-theme-primary font-semibold">See what gets noticed first!</p>
-                                        <p class="text-theme-textSec text-xs leading-relaxed">
-                                            Helps designers verify visual hierarchy and confirm primary call-to-action elements capture focus directly inside Figma.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="space-y-3 pt-4">
-                                    <div class="grid grid-cols-2 gap-2">
-                                        <a href="https://www.figma.com/board/cFb3u36lKzgGH328BIdsED/EyeOrder?node-id=2-2" target="_blank" class="py-2.5 bg-theme-bg hover:bg-theme-bg/80 text-theme-textMain text-xs font-bold rounded-xl border border-theme-border transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm">
-                                            <i class="fa-brands fa-figma text-theme-primary"></i> Wireframe Link
-                                        </a>
-                                        <a href="#" target="_blank" class="py-2.5 bg-theme-primary hover:bg-theme-primaryHover text-white text-xs font-bold rounded-xl transition-all shadow-lg shadow-theme-primary/15 flex items-center justify-center gap-1.5 cursor-pointer">
-                                            <i class="fa-solid fa-rocket"></i> Prototype Link
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Back -->
-                            <div class="absolute inset-0 bg-theme-surface border border-theme-border rounded-2xl p-6 flex flex-col justify-between shadow-sm rotate-y-180 backface-hidden">
-                                <div class="space-y-3">
-                                    <div class="flex items-center justify-between">
-                                        <span class="px-2.5 py-0.5 bg-theme-accentBg text-theme-primary text-[11px] font-bold rounded-lg flex items-center gap-1.5 border border-theme-primary/20"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Problem Statement</span>
-                                        <button onclick="flipCard('proto-3')" class="text-xs font-semibold text-theme-textSec hover:text-theme-textMain bg-theme-bg px-3 py-1.5 rounded-lg border border-theme-border transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm">
-                                            <i class="fa-solid fa-rotate"></i> Back
-                                        </button>
-                                    </div>
-                                    <h3 class="text-sm font-bold text-theme-textMain">Visual Hierarchy Blindspots</h3>
-                                    <p class="text-xs text-theme-textSec leading-relaxed">
-                                        Designers judge user focus by instinct or external screenshot tools. Attention heatmaps rarely evaluate how primary actions rank against competing elements, causing hierarchy issues to be caught late in development.
-                                    </p>
-                                </div>
-                                <div class="grid grid-cols-2 gap-2 pt-4">
-                                    <a href="https://www.figma.com/board/cFb3u36lKzgGH328BIdsED/EyeOrder?node-id=2-2" target="_blank" class="py-2.5 bg-theme-bg hover:bg-theme-bg/80 text-theme-textMain text-xs font-bold rounded-xl border border-theme-border transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm">
-                                        <i class="fa-brands fa-figma text-theme-primary"></i> Wireframes
-                                    </a>
-                                    <a href="#" target="_blank" class="py-2.5 bg-theme-primary hover:bg-theme-primaryHover text-white text-xs font-bold rounded-xl transition-all shadow-md flex items-center justify-center gap-1.5 cursor-pointer">
-                                        <i class="fa-solid fa-rocket"></i> Prototype
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
         <!-- Education Section -->
         <section id="education" class="py-24 px-6 border-t border-theme-border bg-theme-surface/30">
             <div class="max-w-4xl mx-auto">
@@ -890,11 +781,12 @@
                 <p class="text-theme-textSec mb-8">Detailed deep-dives into product strategy, analytics, and execution.</p>
                 
                 <div class="space-y-6">
-                    <!-- Case Study Card: CTRL + THINK -->
+                    <!-- Case Study Card: CTRL + THINK (Reduced Height) -->
                     <div class="perspective-1000 w-full">
                         <div id="card-case-1" class="relative w-full duration-700 transform-style-3d shadow-md rounded-2xl">
                             <!-- Front -->
                             <div class="bg-theme-surface border border-theme-border rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row items-center gap-5 shadow-sm backface-hidden">
+                                <!-- Logo / Cover Image (Sized compactly) -->
                                 <div class="w-full md:w-4/12 aspect-[16/10] bg-theme-bg border border-theme-border/70 rounded-xl relative flex items-center justify-center overflow-hidden shadow-inner shrink-0">
                                     <img src="case study/1.jpg" alt="CTRL + THINK Cover" class="w-full h-full object-cover" />
                                 </div>
@@ -922,8 +814,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Back -->
+                            <!-- Back (Fixed Header & Footer with Middle Scroll) -->
                             <div class="absolute inset-0 bg-theme-surface border border-theme-border rounded-2xl p-6 flex flex-col shadow-sm rotate-y-180 backface-hidden overflow-hidden">
+                                <!-- Fixed Header -->
                                 <div class="flex items-center justify-between pb-3 mb-3 border-b border-theme-border/60 shrink-0">
                                     <div class="flex items-center gap-2">
                                         <i class="fa-solid fa-book-open text-theme-primary text-sm"></i>
@@ -934,6 +827,7 @@
                                     </button>
                                 </div>
 
+                                <!-- Middle Scrollable Text Area -->
                                 <div class="flex-grow overflow-y-auto pr-2 space-y-4 text-xs sm:text-sm text-theme-textSec leading-relaxed">
                                     <p class="font-semibold text-theme-textMain">Comparative Product Teardown: ChatGPT vs Claude vs Gemini</p>
                                     <p>A comparative product teardown across monetization, feature prioritization, UX simplicity and API strategy.</p>
@@ -978,6 +872,7 @@
                                     <p class="italic text-theme-textSec/90 pt-2">I’ve included the full teardown on my portfolio, covering the monetisation analysis, feature prioritisation, UX evaluation, API strategy, user segmentation, competitive landscape, metrics, recommendations, and roadmap.</p>
                                 </div>
 
+                                <!-- Fixed Footer -->
                                 <div class="pt-3 mt-3 border-t border-theme-border/60 flex justify-between items-center shrink-0">
                                     <span class="text-xs text-theme-textSec">Scroll to read full summary</span>
                                     <a href="case study/1.pdf" target="_blank" class="px-4 py-2 bg-theme-primary hover:bg-theme-primaryHover text-white text-xs font-bold rounded-lg transition-all shadow-md">
@@ -1131,12 +1026,50 @@
     <!-- JavaScript -->
     <script>
         // Flip Card Function
+        // Add your deployed prototype URLs here; buttons stay in "Coming Soon" state until set.
+        const PROTOTYPE_URLS = {
+            stocker: "https://stocker-plugin.netlify.app/",
+            linguavault: "https://linguavault.netlify.app/",
+            eyeorder: "https://eyeorder.netlify.app/"
+        };
+
+        function syncExpHeight() {
+            const card = document.getElementById('card-exp-1');
+            if (!card) return;
+            if (card.classList.contains('rotate-y-180')) {
+                const back = card.querySelector(':scope > div.absolute');
+                const grid = back.firstElementChild.nextElementSibling;
+                const h = grid.offsetTop + grid.offsetHeight + 28;
+                card.style.height = h + 'px';
+            } else {
+                card.style.height = '';
+            }
+        }
+
         function flipCard(cardId) {
             const card = document.getElementById(`card-${cardId}`);
             if (card) {
                 card.classList.toggle('rotate-y-180');
+                if (cardId === 'exp-1') syncExpHeight();
             }
         }
+        window.addEventListener('resize', syncExpHeight);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            Object.entries(PROTOTYPE_URLS).forEach(([key, url]) => {
+                const btn = document.getElementById('proto-' + key);
+                if (!btn) return;
+                if (url) {
+                    btn.href = url;
+                } else {
+                    btn.removeAttribute('target');
+                    btn.title = 'Prototype link coming soon';
+                    btn.classList.add('opacity-60', 'cursor-not-allowed');
+                    btn.innerHTML = '<i class="fa-solid fa-hourglass-half"></i> Coming Soon';
+                    btn.addEventListener('click', e => e.preventDefault());
+                }
+            });
+        });
 
         // Modal Controls
         function openModal(modalId) {
