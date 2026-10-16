@@ -1,3 +1,8 @@
+Got it. I have removed the footer entirely and instead added the GitHub button directly alongside the LinkedIn and Email buttons in the Contact section. I've adjusted their widths so they sit perfectly together in a single row on desktop and stack neatly on mobile.
+
+Here is the updated `index (2).html` file:
+
+```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -1009,33 +1014,23 @@
                         <span id="contact-typing-text"></span><span class="typing-cursor contact-cursor">&nbsp;</span>
                     </p>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-lg">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-stretch w-full max-w-3xl">
                     <!-- Email Button -->
-                    <a href="mailto:aanchalroutela01@gmail.com" class="w-full sm:w-1/2 px-6 py-4 bg-theme-primary hover:bg-theme-primaryHover text-white font-bold rounded-xl transition-all shadow-xl shadow-theme-primary/15 flex items-center justify-center gap-3 text-sm">
+                    <a href="mailto:aanchalroutela01@gmail.com" class="w-full sm:flex-1 px-6 py-4 bg-theme-primary hover:bg-theme-primaryHover text-white font-bold rounded-xl transition-all shadow-xl shadow-theme-primary/15 flex items-center justify-center gap-3 text-sm">
                         <i class="fa-solid fa-envelope text-lg"></i> Send Email
                     </a>
                     <!-- LinkedIn Button -->
-                    <a href="https://www.linkedin.com/in/aanchalroutela" target="_blank" class="w-full sm:w-1/2 px-6 py-4 bg-[#0A66C2] hover:bg-[#084e96] text-white font-bold rounded-xl transition-all shadow-xl shadow-[#0A66C2]/20 flex items-center justify-center gap-3 text-sm">
-                        <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn Profile
+                    <a href="https://www.linkedin.com/in/aanchalroutela" target="_blank" class="w-full sm:flex-1 px-6 py-4 bg-[#0A66C2] hover:bg-[#084e96] text-white font-bold rounded-xl transition-all shadow-xl shadow-[#0A66C2]/20 flex items-center justify-center gap-3 text-sm">
+                        <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn
+                    </a>
+                    <!-- GitHub Button -->
+                    <a href="https://github.com/23f2004126" target="_blank" class="w-full sm:flex-1 px-6 py-4 bg-[#24292e] hover:bg-[#1b1f23] text-white font-bold rounded-xl transition-all shadow-xl shadow-black/20 flex items-center justify-center gap-3 text-sm">
+                        <i class="fa-brands fa-github text-lg"></i> GitHub
                     </a>
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- Footer Section -->
-    <footer class="bg-theme-bg border-t border-theme-border">
-        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p class="text-sm font-medium text-theme-textSec">
-                &copy; 2026 Aanchal Routela. All rights reserved.
-            </p>
-            <div class="flex items-center gap-6 text-theme-textSec">
-                <a href="mailto:aanchalroutela01@gmail.com" class="hover:text-theme-primary transition-colors text-lg" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/aanchalroutela" target="_blank" class="hover:text-theme-primary transition-colors text-lg" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/23f2004126" target="_blank" class="hover:text-theme-primary transition-colors text-lg" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-        </div>
-    </footer>
 
     <!-- MODAL 1: Sonik -->
     <div id="modal-1" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4 overflow-y-auto">
@@ -1276,3 +1271,5 @@
     </script>
 </body>
 </html>
+
+```
