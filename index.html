@@ -112,7 +112,7 @@
                 <a href="#resume" class="hover:text-theme-primary transition-colors">Resume</a>
             </nav>
             <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-theme-primary hover:bg-theme-primaryHover rounded-lg transition-all shadow-lg shadow-theme-primary/15">
-                Let's Connect !! 
+                Let's Connect
             </a>
         </div>
     </header>
@@ -322,6 +322,7 @@
 
         <!-- Skills Section -->
         <style>
+            /* Wide Horizontal Skill Card Layout */
             .skill-card {
                 position: relative; overflow: hidden;
                 background: rgba(37, 37, 37, 0.15); /* Transparent/translucent tile */
@@ -329,13 +330,27 @@
                 -webkit-backdrop-filter: blur(12px);
                 border: 1px solid rgba(255, 255, 255, 0.05); 
                 border-radius: 1.25rem; padding: 1.5rem;
-                width: 400px; /* Fixed width for horizontal sliding */
+                width: 850px; /* Wider width for horizontal layout */
                 flex-shrink: 0;
-                display: flex; flex-direction: column;
+                display: flex; flex-direction: row; align-items: center;
             }
+            .skill-card-header {
+                width: 240px; flex-shrink: 0; display: flex; align-items: center; gap: 1rem;
+            }
+            .skill-card-body {
+                flex-grow: 1; border-left: 1px solid rgba(255, 255, 255, 0.1); padding-left: 1.75rem; margin-left: 1rem;
+            }
+            .skill-card-body-flex {
+                display: flex; flex-wrap: wrap; gap: 0.5rem;
+            }
+            
+            /* Responsive handling for the horizontal cards */
             @media (max-width: 640px) {
-                .skill-card { width: 320px; }
+                .skill-card { width: 340px; flex-direction: column; align-items: flex-start; }
+                .skill-card-header { width: 100%; }
+                .skill-card-body { border-left: none; padding-left: 0; margin-left: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1.25rem; margin-top: 0.75rem; }
             }
+
             .skill-card::before {
                 content: ""; position: absolute; top: 0; left: 1.5rem; right: 1.5rem; height: 2px;
                 background: linear-gradient(90deg, #FF6A2A, transparent); opacity: .55; border-radius: 0 0 4px 4px;
@@ -379,7 +394,7 @@
             .marquee-track {
                 display: flex;
                 width: max-content;
-                animation: marquee 40s linear infinite;
+                animation: marquee 70s linear infinite; /* Slightly longer duration for the wider cards */
             }
             .marquee-track:hover {
                 animation-play-state: paused;
@@ -396,21 +411,24 @@
                 </h2>
                 <div class="flex flex-wrap items-center gap-3 mb-10">
                     <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-theme-primary text-white text-sm font-bold shadow-lg shadow-theme-primary/20"><i class="fa-solid fa-layer-group text-xs"></i> Product Management</span>
+                    <span class="text-sm text-theme-textSec">Core discipline, backed by data, AI and hands-on tooling.</span>
                 </div>
 
                 <div class="marquee-container">
                     <div class="marquee-track">
                         <!-- GROUP 1 -->
                         <div class="flex gap-6 pr-6">
+                            
+                            <!-- Card 1: Horizontal Layout -->
                             <div class="skill-card glow-tile">
-                                <div class="flex items-center gap-3.5 mb-5">
+                                <div class="skill-card-header">
                                     <div class="w-11 h-11 rounded-xl bg-theme-accentBg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0"><i class="fa-solid fa-compass"></i></div>
                                     <div>
                                         <h3 class="text-base font-bold text-theme-textMain leading-tight">Discovery & Strategy</h3>
                                         <p class="text-xs text-theme-textSec mt-0.5">Understanding users and deciding what to build</p>
                                     </div>
                                 </div>
-                                <div class="flex flex-wrap gap-2">
+                                <div class="skill-card-body skill-card-body-flex">
                                     <span class="skill-chip"><i class="fa-solid fa-lightbulb text-theme-primary text-[11px]"></i>Product Discovery</span>
                                     <span class="skill-chip"><i class="fa-solid fa-bullseye text-theme-primary text-[11px]"></i>Problem Definition & Validation</span>
                                     <span class="skill-chip"><i class="fa-solid fa-users text-theme-primary text-[11px]"></i>User Research & Customer Interviews</span>
@@ -422,15 +440,17 @@
                                     <span class="skill-chip"><i class="fa-solid fa-rocket text-theme-primary text-[11px]"></i>Go-to-Market (GTM)</span>
                                 </div>
                             </div>
+                            
+                            <!-- Card 2: Horizontal Layout -->
                             <div class="skill-card glow-tile">
-                                <div class="flex items-center gap-3.5 mb-5">
+                                <div class="skill-card-header">
                                     <div class="w-11 h-11 rounded-xl bg-theme-accentBg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0"><i class="fa-solid fa-diagram-project"></i></div>
                                     <div>
                                         <h3 class="text-base font-bold text-theme-textMain leading-tight">Delivery & Analytics</h3>
                                         <p class="text-xs text-theme-textSec mt-0.5">Shipping product and measuring what works</p>
                                     </div>
                                 </div>
-                                <div class="flex flex-wrap gap-2">
+                                <div class="skill-card-body skill-card-body-flex">
                                     <span class="skill-chip"><i class="fa-solid fa-file-signature text-theme-primary text-[11px]"></i>Product Requirements & PRDs</span>
                                     <span class="skill-chip"><i class="fa-solid fa-list-check text-theme-primary text-[11px]"></i>User Stories & Acceptance Criteria</span>
                                     <span class="skill-chip"><i class="fa-solid fa-arrow-up-short-wide text-theme-primary text-[11px]"></i>Feature Prioritization</span>
@@ -445,15 +465,17 @@
                                     <span class="skill-chip"><i class="fa-solid fa-vial text-theme-primary text-[11px]"></i>MVP Experimentation</span>
                                 </div>
                             </div>
+                            
+                            <!-- Card 3: Horizontal Layout -->
                             <div class="skill-card glow-tile skill-card-ai">
-                                <div class="flex items-center gap-3.5 mb-5">
+                                <div class="skill-card-header">
                                     <div class="w-11 h-11 rounded-xl bg-theme-accentBg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                                     <div>
                                         <h3 class="text-base font-bold text-theme-textMain leading-tight">AI Product</h3>
                                         <p class="text-xs text-theme-textSec mt-0.5">Building and evaluating GenAI-powered products</p>
                                     </div>
                                 </div>
-                                <div class="flex flex-wrap gap-2">
+                                <div class="skill-card-body skill-card-body-flex">
                                     <span class="skill-chip"><i class="fa-solid fa-robot text-theme-primary text-[11px]"></i>AI Product</span>
                                     <span class="skill-chip"><i class="fa-solid fa-microchip text-theme-primary text-[11px]"></i>AI Product Management</span>
                                     <span class="skill-chip"><i class="fa-solid fa-brain text-theme-primary text-[11px]"></i>AI Product Thinking</span>
@@ -465,29 +487,56 @@
                                     <span class="skill-chip"><i class="fa-solid fa-check-double text-theme-primary text-[11px]"></i>AI Evaluation</span>
                                 </div>
                             </div>
+                            
+                            <!-- Card 4: Horizontal Layout -->
                             <div class="skill-card glow-tile">
-                                <div class="flex items-center gap-3.5 mb-5">
+                                <div class="skill-card-header">
                                     <div class="w-11 h-11 rounded-xl bg-theme-accentBg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0"><i class="fa-solid fa-toolbox"></i></div>
                                     <div>
                                         <h3 class="text-base font-bold text-theme-textMain leading-tight">Tools & Tech</h3>
                                         <p class="text-xs text-theme-textSec mt-0.5">What I work in day to day</p>
                                     </div>
                                 </div>
-                                <p class="text-[11px] font-bold text-theme-primary uppercase tracking-wider mb-2.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Tools</p><div class="flex flex-wrap gap-2"><span class="skill-chip"><i class="fa-brands fa-jira text-theme-primary text-[11px]"></i>Jira</span><span class="skill-chip"><i class="fa-solid fa-file-excel text-theme-primary text-[11px]"></i>Excel / Zoho Sheets</span><span class="skill-chip"><i class="fa-brands fa-figma text-theme-primary text-[11px]"></i>Figma</span><span class="skill-chip"><i class="fa-brands fa-github text-theme-primary text-[11px]"></i>GitHub</span></div><div class="h-5"></div><p class="text-[11px] font-bold text-theme-primary uppercase tracking-wider mb-2.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Technical Skills</p><div class="flex flex-wrap gap-2"><span class="skill-chip"><i class="fa-brands fa-python text-theme-primary text-[11px]"></i>Python</span><span class="skill-chip"><i class="fa-solid fa-database text-theme-primary text-[11px]"></i>SQL</span><span class="skill-chip"><i class="fa-solid fa-table text-theme-primary text-[11px]"></i>Pandas</span><span class="skill-chip"><i class="fa-solid fa-square-root-variable text-theme-primary text-[11px]"></i>NumPy</span><span class="skill-chip"><i class="fa-solid fa-brain text-theme-primary text-[11px]"></i>Scikit-learn</span><span class="skill-chip"><i class="fa-solid fa-network-wired text-theme-primary text-[11px]"></i>TensorFlow</span><span class="skill-chip"><i class="fa-solid fa-bolt text-theme-primary text-[11px]"></i>FastAPI</span><span class="skill-chip"><i class="fa-solid fa-flask text-theme-primary text-[11px]"></i>Flask</span><span class="skill-chip"><i class="fa-solid fa-link text-theme-primary text-[11px]"></i>LangChain</span><span class="skill-chip"><i class="fa-solid fa-magnifying-glass text-theme-primary text-[11px]"></i>FAISS</span><span class="skill-chip"><i class="fa-brands fa-git-alt text-theme-primary text-[11px]"></i>Git</span></div>
+                                <div class="skill-card-body">
+                                    <p class="text-[11px] font-bold text-theme-primary uppercase tracking-wider mb-2.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Tools</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-chip"><i class="fa-brands fa-jira text-theme-primary text-[11px]"></i>Jira</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-file-excel text-theme-primary text-[11px]"></i>Excel / Zoho Sheets</span>
+                                        <span class="skill-chip"><i class="fa-brands fa-figma text-theme-primary text-[11px]"></i>Figma</span>
+                                        <span class="skill-chip"><i class="fa-brands fa-github text-theme-primary text-[11px]"></i>GitHub</span>
+                                    </div>
+                                    <div class="h-4"></div>
+                                    <p class="text-[11px] font-bold text-theme-primary uppercase tracking-wider mb-2.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Technical Skills</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-chip"><i class="fa-brands fa-python text-theme-primary text-[11px]"></i>Python</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-database text-theme-primary text-[11px]"></i>SQL</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-table text-theme-primary text-[11px]"></i>Pandas</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-square-root-variable text-theme-primary text-[11px]"></i>NumPy</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-brain text-theme-primary text-[11px]"></i>Scikit-learn</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-network-wired text-theme-primary text-[11px]"></i>TensorFlow</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-bolt text-theme-primary text-[11px]"></i>FastAPI</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-flask text-theme-primary text-[11px]"></i>Flask</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-link text-theme-primary text-[11px]"></i>LangChain</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-magnifying-glass text-theme-primary text-[11px]"></i>FAISS</span>
+                                        <span class="skill-chip"><i class="fa-brands fa-git-alt text-theme-primary text-[11px]"></i>Git</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <!-- GROUP 2 (Duplicate for continuous scroll) -->
                         <div class="flex gap-6 pr-6" aria-hidden="true">
+                            
+                            <!-- Card 1: Horizontal Layout -->
                             <div class="skill-card glow-tile">
-                                <div class="flex items-center gap-3.5 mb-5">
+                                <div class="skill-card-header">
                                     <div class="w-11 h-11 rounded-xl bg-theme-accentBg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0"><i class="fa-solid fa-compass"></i></div>
                                     <div>
                                         <h3 class="text-base font-bold text-theme-textMain leading-tight">Discovery & Strategy</h3>
                                         <p class="text-xs text-theme-textSec mt-0.5">Understanding users and deciding what to build</p>
                                     </div>
                                 </div>
-                                <div class="flex flex-wrap gap-2">
+                                <div class="skill-card-body skill-card-body-flex">
                                     <span class="skill-chip"><i class="fa-solid fa-lightbulb text-theme-primary text-[11px]"></i>Product Discovery</span>
                                     <span class="skill-chip"><i class="fa-solid fa-bullseye text-theme-primary text-[11px]"></i>Problem Definition & Validation</span>
                                     <span class="skill-chip"><i class="fa-solid fa-users text-theme-primary text-[11px]"></i>User Research & Customer Interviews</span>
@@ -499,15 +548,17 @@
                                     <span class="skill-chip"><i class="fa-solid fa-rocket text-theme-primary text-[11px]"></i>Go-to-Market (GTM)</span>
                                 </div>
                             </div>
+                            
+                            <!-- Card 2: Horizontal Layout -->
                             <div class="skill-card glow-tile">
-                                <div class="flex items-center gap-3.5 mb-5">
+                                <div class="skill-card-header">
                                     <div class="w-11 h-11 rounded-xl bg-theme-accentBg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0"><i class="fa-solid fa-diagram-project"></i></div>
                                     <div>
                                         <h3 class="text-base font-bold text-theme-textMain leading-tight">Delivery & Analytics</h3>
                                         <p class="text-xs text-theme-textSec mt-0.5">Shipping product and measuring what works</p>
                                     </div>
                                 </div>
-                                <div class="flex flex-wrap gap-2">
+                                <div class="skill-card-body skill-card-body-flex">
                                     <span class="skill-chip"><i class="fa-solid fa-file-signature text-theme-primary text-[11px]"></i>Product Requirements & PRDs</span>
                                     <span class="skill-chip"><i class="fa-solid fa-list-check text-theme-primary text-[11px]"></i>User Stories & Acceptance Criteria</span>
                                     <span class="skill-chip"><i class="fa-solid fa-arrow-up-short-wide text-theme-primary text-[11px]"></i>Feature Prioritization</span>
@@ -522,15 +573,17 @@
                                     <span class="skill-chip"><i class="fa-solid fa-vial text-theme-primary text-[11px]"></i>MVP Experimentation</span>
                                 </div>
                             </div>
+                            
+                            <!-- Card 3: Horizontal Layout -->
                             <div class="skill-card glow-tile skill-card-ai">
-                                <div class="flex items-center gap-3.5 mb-5">
+                                <div class="skill-card-header">
                                     <div class="w-11 h-11 rounded-xl bg-theme-accentBg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                                     <div>
                                         <h3 class="text-base font-bold text-theme-textMain leading-tight">AI Product</h3>
                                         <p class="text-xs text-theme-textSec mt-0.5">Building and evaluating GenAI-powered products</p>
                                     </div>
                                 </div>
-                                <div class="flex flex-wrap gap-2">
+                                <div class="skill-card-body skill-card-body-flex">
                                     <span class="skill-chip"><i class="fa-solid fa-robot text-theme-primary text-[11px]"></i>AI Product</span>
                                     <span class="skill-chip"><i class="fa-solid fa-microchip text-theme-primary text-[11px]"></i>AI Product Management</span>
                                     <span class="skill-chip"><i class="fa-solid fa-brain text-theme-primary text-[11px]"></i>AI Product Thinking</span>
@@ -542,15 +595,40 @@
                                     <span class="skill-chip"><i class="fa-solid fa-check-double text-theme-primary text-[11px]"></i>AI Evaluation</span>
                                 </div>
                             </div>
+                            
+                            <!-- Card 4: Horizontal Layout -->
                             <div class="skill-card glow-tile">
-                                <div class="flex items-center gap-3.5 mb-5">
+                                <div class="skill-card-header">
                                     <div class="w-11 h-11 rounded-xl bg-theme-accentBg border border-theme-primary/30 flex items-center justify-center text-theme-primary shrink-0"><i class="fa-solid fa-toolbox"></i></div>
                                     <div>
                                         <h3 class="text-base font-bold text-theme-textMain leading-tight">Tools & Tech</h3>
                                         <p class="text-xs text-theme-textSec mt-0.5">What I work in day to day</p>
                                     </div>
                                 </div>
-                                <p class="text-[11px] font-bold text-theme-primary uppercase tracking-wider mb-2.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Tools</p><div class="flex flex-wrap gap-2"><span class="skill-chip"><i class="fa-brands fa-jira text-theme-primary text-[11px]"></i>Jira</span><span class="skill-chip"><i class="fa-solid fa-file-excel text-theme-primary text-[11px]"></i>Excel / Zoho Sheets</span><span class="skill-chip"><i class="fa-brands fa-figma text-theme-primary text-[11px]"></i>Figma</span><span class="skill-chip"><i class="fa-brands fa-github text-theme-primary text-[11px]"></i>GitHub</span></div><div class="h-5"></div><p class="text-[11px] font-bold text-theme-primary uppercase tracking-wider mb-2.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Technical Skills</p><div class="flex flex-wrap gap-2"><span class="skill-chip"><i class="fa-brands fa-python text-theme-primary text-[11px]"></i>Python</span><span class="skill-chip"><i class="fa-solid fa-database text-theme-primary text-[11px]"></i>SQL</span><span class="skill-chip"><i class="fa-solid fa-table text-theme-primary text-[11px]"></i>Pandas</span><span class="skill-chip"><i class="fa-solid fa-square-root-variable text-theme-primary text-[11px]"></i>NumPy</span><span class="skill-chip"><i class="fa-solid fa-brain text-theme-primary text-[11px]"></i>Scikit-learn</span><span class="skill-chip"><i class="fa-solid fa-network-wired text-theme-primary text-[11px]"></i>TensorFlow</span><span class="skill-chip"><i class="fa-solid fa-bolt text-theme-primary text-[11px]"></i>FastAPI</span><span class="skill-chip"><i class="fa-solid fa-flask text-theme-primary text-[11px]"></i>Flask</span><span class="skill-chip"><i class="fa-solid fa-link text-theme-primary text-[11px]"></i>LangChain</span><span class="skill-chip"><i class="fa-solid fa-magnifying-glass text-theme-primary text-[11px]"></i>FAISS</span><span class="skill-chip"><i class="fa-brands fa-git-alt text-theme-primary text-[11px]"></i>Git</span></div>
+                                <div class="skill-card-body">
+                                    <p class="text-[11px] font-bold text-theme-primary uppercase tracking-wider mb-2.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Tools</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-chip"><i class="fa-brands fa-jira text-theme-primary text-[11px]"></i>Jira</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-file-excel text-theme-primary text-[11px]"></i>Excel / Zoho Sheets</span>
+                                        <span class="skill-chip"><i class="fa-brands fa-figma text-theme-primary text-[11px]"></i>Figma</span>
+                                        <span class="skill-chip"><i class="fa-brands fa-github text-theme-primary text-[11px]"></i>GitHub</span>
+                                    </div>
+                                    <div class="h-4"></div>
+                                    <p class="text-[11px] font-bold text-theme-primary uppercase tracking-wider mb-2.5 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-theme-primary"></span> Technical Skills</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-chip"><i class="fa-brands fa-python text-theme-primary text-[11px]"></i>Python</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-database text-theme-primary text-[11px]"></i>SQL</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-table text-theme-primary text-[11px]"></i>Pandas</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-square-root-variable text-theme-primary text-[11px]"></i>NumPy</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-brain text-theme-primary text-[11px]"></i>Scikit-learn</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-network-wired text-theme-primary text-[11px]"></i>TensorFlow</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-bolt text-theme-primary text-[11px]"></i>FastAPI</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-flask text-theme-primary text-[11px]"></i>Flask</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-link text-theme-primary text-[11px]"></i>LangChain</span>
+                                        <span class="skill-chip"><i class="fa-solid fa-magnifying-glass text-theme-primary text-[11px]"></i>FAISS</span>
+                                        <span class="skill-chip"><i class="fa-brands fa-git-alt text-theme-primary text-[11px]"></i>Git</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1152,7 +1230,7 @@
         <!-- Contact Section -->
         <section id="contact" class="py-24 px-6 border-t border-theme-border bg-theme-surface/30">
             <div class="max-w-3xl mx-auto text-center flex flex-col items-center">
-                <h2 class="text-3xl font-bold text-theme-textMain mb-4">Let's Connect !!</h2>
+                <h2 class="text-3xl font-bold text-theme-textMain mb-4">Let's Connect</h2>
                 <div class="min-h-[70px] mb-8 w-full flex justify-center items-center">
                     <p class="text-theme-textSec text-base sm:text-lg leading-relaxed max-w-xl">
                         <span id="contact-typing-text"></span><span class="typing-cursor contact-cursor">&nbsp;</span>
