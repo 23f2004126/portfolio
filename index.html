@@ -324,7 +324,11 @@
         <style>
             .skill-card {
                 position: relative; overflow: hidden;
-                background: #252525; border: 1px solid #333333; border-radius: 1.25rem; padding: 1.5rem;
+                background: rgba(37, 37, 37, 0.15); /* Transparent/translucent tile */
+                backdrop-filter: blur(12px); /* Glass effect */
+                -webkit-backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.05); 
+                border-radius: 1.25rem; padding: 1.5rem;
                 width: 400px; /* Fixed width for horizontal sliding */
                 flex-shrink: 0;
                 display: flex; flex-direction: column;
@@ -336,15 +340,18 @@
                 content: ""; position: absolute; top: 0; left: 1.5rem; right: 1.5rem; height: 2px;
                 background: linear-gradient(90deg, #FF6A2A, transparent); opacity: .55; border-radius: 0 0 4px 4px;
             }
-            .skill-card-ai { background: linear-gradient(135deg, #2A211C 0%, #252525 60%); border-color: rgba(255,106,42,.35); }
+            .skill-card-ai { 
+                background: linear-gradient(135deg, rgba(255, 106, 42, 0.08) 0%, rgba(37, 37, 37, 0.15) 60%); 
+                border-color: rgba(255, 106, 42, 0.25); 
+            }
             .skill-chip {
                 display: inline-flex; align-items: center; gap: .45rem;
                 padding: .4rem .8rem; border-radius: 9999px;
-                background: #121212; border: 1px solid rgba(51,51,51,.9);
+                background: rgba(18, 18, 18, 0.5); border: 1px solid rgba(51,51,51,.9);
                 color: #CFC8BB; font-size: .78rem; font-weight: 500; line-height: 1.2;
                 transition: all .2s ease; cursor: default;
             }
-            .skill-chip:hover { border-color: #FF6A2A; color: #F4EDE1; background: #251E1A; transform: translateY(-1px); }
+            .skill-chip:hover { border-color: #FF6A2A; color: #F4EDE1; background: rgba(37, 30, 26, 0.8); transform: translateY(-1px); }
 
             /* Shared tile glow (hover) */
             .glow-tile, .perspective-1000 > div > .backface-hidden {
@@ -389,6 +396,7 @@
                 </h2>
                 <div class="flex flex-wrap items-center gap-3 mb-10">
                     <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-theme-primary text-white text-sm font-bold shadow-lg shadow-theme-primary/20"><i class="fa-solid fa-layer-group text-xs"></i> Product Management</span>
+                    <span class="text-sm text-theme-textSec">Core discipline, backed by data, AI and hands-on tooling.</span>
                 </div>
 
                 <div class="marquee-container">
@@ -1408,4 +1416,3 @@
     </script>
 </body>
 </html>
-```<FollowUp> How is this looking for you? Want to adjust the speed of the slider?
